@@ -1,4 +1,4 @@
-import { FaHeartbeat, FaShieldAlt, FaUserShield, FaStar, FaMedal, FaCheckCircle, FaPiggyBank, FaGlobe } from 'react-icons/fa';
+import { FaShieldAlt, FaUserShield, FaStar, FaMedal, FaCheckCircle } from 'react-icons/fa';
 
 export default function VidaPage() {
   return (

@@ -1,4 +1,4 @@
-import { FaHome, FaShieldAlt, FaUmbrella, FaStar, FaMedal, FaCheckCircle, FaFire, FaLock } from 'react-icons/fa';
+import {FaShieldAlt, FaUmbrella, FaStar, FaMedal, FaCheckCircle} from 'react-icons/fa';
 
 export default function ViviendaPage() {
   return (

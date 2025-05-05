@@ -1,4 +1,4 @@
-import { FaCar, FaShieldAlt, FaRoad, FaUserShield, FaStar, FaMedal, FaCheckCircle } from 'react-icons/fa';
+import { FaShieldAlt, FaRoad, FaUserShield, FaStar, FaMedal, FaCheckCircle } from 'react-icons/fa';
 
 export default function AutoPage() {
   return (
