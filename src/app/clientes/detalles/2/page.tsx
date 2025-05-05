@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaCar, FaHome, FaHeartbeat, FaShieldAlt, FaChevronRight } from 'react-icons/fa';
+import { FaHome, FaHeartbeat, FaShieldAlt, FaChevronRight } from 'react-icons/fa';
 
 export default function HomePage() {
   return (
@@ -42,7 +42,7 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <div className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
             <div className="bg-gray-100 p-8 flex justify-center">
-              <FaCar className="text-blue-600 text-5xl" />
+              
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold text-gray-800 mb-3">Seguro Automotriz</h3>

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaCar, FaHome, FaHeartbeat, FaShieldAlt, FaRoad, FaUserShield, FaUmbrella, FaPiggyBank, FaStar, FaMedal, FaLock, FaHandshake, FaChartLine, FaHeadset } from 'react-icons/fa';
+import { FaHome, FaHeartbeat, FaShieldAlt, FaUserShield, FaUmbrella, FaPiggyBank, FaStar, FaMedal, FaLock, FaHandshake, FaChartLine, FaHeadset } from 'react-icons/fa';
 
 export default function HomePage() {
   return (
@@ -36,7 +36,7 @@ export default function HomePage() {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden transform group-hover:-translate-y-2 transition duration-300 h-full">
               <div className="bg-blue-600 p-6 flex items-center">
                 <div className="bg-white p-3 rounded-lg mr-4">
-                  <FaCar className="text-blue-600 text-2xl" />
+                  
                 </div>
                 <h3 className="text-xl font-bold text-white">Seguro de Auto</h3>
               </div>
@@ -48,7 +48,7 @@ export default function HomePage() {
                     <span>Cobertura total en accidentes</span>
                   </li>
                   <li className="flex items-start">
-                    <FaRoad className="text-blue-500 mt-1 mr-3 flex-shrink-0" />
+                    
                     <span>Asistencia en carretera 24/7</span>
                   </li>
                   <li className="flex items-start">

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaCar, FaHome, FaHeartbeat, FaShieldAlt, FaChevronRight, FaStar, FaHandshake, FaHeadset } from 'react-icons/fa';
+import { FaHome, FaHeartbeat, FaShieldAlt, FaChevronRight, FaStar, FaHandshake, FaHeadset } from 'react-icons/fa';
 
 export default function HomePage() {
   return (
@@ -47,7 +47,7 @@ export default function HomePage() {
             <div className="bg-white rounded-xl shadow-xl overflow-hidden transform group-hover:-translate-y-2 transition duration-500 h-full border-t-4 border-blue-500">
               <div className="p-8">
                 <div className="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                  <FaCar className="text-blue-600 text-2xl" />
+                  
                 </div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">Protección Vehicular</h3>
                 <p className="text-gray-600 mb-6">
