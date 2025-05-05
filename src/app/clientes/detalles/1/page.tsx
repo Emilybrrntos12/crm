@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaHome, FaHeartbeat, FaShieldAlt, FaUserShield, FaUmbrella, FaPiggyBank, FaStar, FaMedal, FaLock, FaHandshake, FaChartLine, FaHeadset } from 'react-icons/fa';
+import { FaHome, FaHeartbeat, FaShieldAlt, FaUserShield, FaUmbrella, FaPiggyBank, FaMedal, FaLock, FaHandshake, FaChartLine, FaHeadset } from 'react-icons/fa';
 
 export default function HomePage() {
   return (
