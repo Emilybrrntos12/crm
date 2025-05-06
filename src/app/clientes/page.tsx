@@ -11,7 +11,7 @@ export default function ClientesPage() {
           <p className="text-gray-600 mt-2">Administra y gestiona todos tus clientes en un solo lugar</p>
         </div>
         <Link 
-          href="/clientes/nuevo" 
+          href="/clientes/nuevo/" 
           className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md flex items-center mt-4 md:mt-0 transition duration-300"
         >
           <FiPlus className="mr-2" />
@@ -64,8 +64,8 @@ export default function ClientesPage() {
           </div>
         </div>
 
-        {/* Table */}
-        <div className="overflow-x-auto">
+ {/* Table */}
+ <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
@@ -74,6 +74,12 @@ export default function ClientesPage() {
                 </th>
                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Contacto
+                </th>
+                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Fecha Nacimiento
+                </th>
+                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Dirección
                 </th>
                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Empresa
@@ -87,6 +93,7 @@ export default function ClientesPage() {
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
+              
               {/* Client 1 */}
               <tr className="hover:bg-gray-50 transition duration-150">
                 <td className="px-6 py-4 whitespace-nowrap">
@@ -105,6 +112,12 @@ export default function ClientesPage() {
                   <div className="text-sm text-gray-500">+52 55 1234 5678</div>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="text-sm text-gray-900">15/03/1985</div>
+                </td>
+                <td className="px-6 py-4">
+                  <div className="text-sm text-gray-900">Av. Reforma 123, CDMX</div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
                   <div className="text-sm font-medium text-gray-900">Acme Corp</div>
                   <div className="text-sm text-gray-500">Cliente desde: 2023</div>
                 </td>
@@ -121,9 +134,6 @@ export default function ClientesPage() {
                     <Link href="/clientes/editar/1" className="text-yellow-600 hover:text-yellow-900">
                       <FiEdit className="h-5 w-5" />
                     </Link>
-                    <button className="text-red-600 hover:text-red-900">
-                      <FiTrash2 className="h-5 w-5" />
-                    </button>
                   </div>
                 </td>
               </tr>
@@ -146,6 +156,12 @@ export default function ClientesPage() {
                   <div className="text-sm text-gray-500">+52 55 9876 5432</div>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="text-sm text-gray-900">22/07/1990</div>
+                </td>
+                <td className="px-6 py-4">
+                  <div className="text-sm text-gray-900">Calle Morelos 45, GDL</div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
                   <div className="text-sm font-medium text-gray-900">Globex Inc</div>
                   <div className="text-sm text-gray-500">Cliente desde: 2022</div>
                 </td>
@@ -162,9 +178,6 @@ export default function ClientesPage() {
                     <Link href="/clientes/editar/2" className="text-yellow-600 hover:text-yellow-900">
                       <FiEdit className="h-5 w-5" />
                     </Link>
-                    <button className="text-red-600 hover:text-red-900">
-                      <FiTrash2 className="h-5 w-5" />
-                    </button>
                   </div>
                 </td>
               </tr>
@@ -187,6 +200,12 @@ export default function ClientesPage() {
                   <div className="text-sm text-gray-500">+52 55 1122 3344</div>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="text-sm text-gray-900">10/11/1978</div>
+                </td>
+                <td className="px-6 py-4">
+                  <div className="text-sm text-gray-900">Blvd. Díaz Ordaz 789, MTY</div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
                   <div className="text-sm font-medium text-gray-900">Initech</div>
                   <div className="text-sm text-gray-500">Cliente desde: 2021</div>
                 </td>
@@ -203,9 +222,6 @@ export default function ClientesPage() {
                     <Link href="/clientes/editar/3" className="text-yellow-600 hover:text-yellow-900">
                       <FiEdit className="h-5 w-5" />
                     </Link>
-                    <button className="text-red-600 hover:text-red-900">
-                      <FiTrash2 className="h-5 w-5" />
-                    </button>
                   </div>
                 </td>
               </tr>
