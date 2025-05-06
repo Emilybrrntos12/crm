@@ -1,4 +1,4 @@
-import { FiPlus, FiSearch, FiFilter, FiDownload, FiEye, FiEdit, FiTrash2, FiChevronLeft, FiChevronRight, FiDollarSign, FiCreditCard, FiCheckCircle, FiClock, FiAlertCircle } from 'react-icons/fi';
+import { FiPlus, FiSearch, FiDownload, FiEye, FiEdit, FiTrash2, FiChevronLeft, FiChevronRight, FiDollarSign, FiCreditCard } from 'react-icons/fi';
 
 export default function PagosPage() {
   // Datos de ejemplo para pagos
