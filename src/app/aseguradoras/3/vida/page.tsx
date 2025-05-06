@@ -1,4 +1,4 @@
-import { FaHeart, FaCheckCircle, FaShieldAlt, FaUserFriends, FaChartLine, FaHandHoldingHeart, FaPhoneAlt, FaFileAlt } from 'react-icons/fa';
+import { FaHeart, FaCheckCircle,FaShieldAlt, FaUserFriends, FaChartLine, FaHandHoldingHeart, FaPhoneAlt, FaFileAlt } from 'react-icons/fa';
 
 export default function LifeInsurancePage() {
   return (
