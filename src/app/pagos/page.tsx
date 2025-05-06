@@ -1,4 +1,5 @@
 import { FiPlus, FiSearch, FiDownload, FiEye, FiEdit, FiTrash2, FiChevronLeft, FiChevronRight, FiDollarSign, FiCreditCard } from 'react-icons/fi';
+import Link from 'next/link';
 
 export default function PagosPage() {
   // Datos de ejemplo para pagos
@@ -18,7 +19,7 @@ export default function PagosPage() {
       cliente: "María Pérez",
       poliza: "POL-2023-00234",
       monto: "$5,000.00",
-      metodo: "Transferencia",
+      metodo: "Pendiente",
       fechaMaxima: "08/05/2025",
       fechaPago: "",
       estado: "Pendiente"
@@ -28,33 +29,10 @@ export default function PagosPage() {
       cliente: "Carlos Gómez",
       poliza: "POL-2023-00345",
       monto: "$3,200.00",
-      metodo: "Efectivo",
+      metodo: "Pendiente",
       fechaMaxima: "30/04/2025",
       fechaPago: "",
       estado: "Vencido"
-    }
-  ];
-
-  const pagosEmpresa = [
-    {
-      id: 1,
-      cliente: "Siniestro Juan López",
-      poliza: "POL-2023-00158",
-      monto: "$15,000.00",
-      metodo: "Transferencia",
-      fechaMaxima: "10/05/2025",
-      fechaPago: "05/05/2025",
-      estado: "Completado"
-    },
-    {
-      id: 2,
-      cliente: "Siniestro María Pérez",
-      poliza: "POL-2023-00234",
-      monto: "$8,500.00",
-      metodo: "Cheque",
-      fechaMaxima: "15/05/2025",
-      fechaPago: "",
-      estado: "Pendiente"
     }
   ];
 
@@ -78,9 +56,11 @@ export default function PagosPage() {
           <button className="px-4 py-2 text-sm font-medium text-blue-600 border-b-2 border-blue-600">
             Pagos de Clientes
           </button>
-          <button className="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">
-            Pagos a Clientes
-          </button>
+          <Link href="/pagos/clientes">
+            <button className="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">
+              Pagos a Clientes
+            </button>
+          </Link>
         </nav>
       </div>
 
@@ -208,101 +188,7 @@ export default function PagosPage() {
             </table>
           </div>
         </div>
-      </div>
-
-      {/* Pagos a Clientes */}
-      <div className="mb-12">
-        <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-          <FiDollarSign className="mr-2 text-green-500" />
-          Pagos de Empresa a Clientes (Siniestros)
-        </h2>
-        
-        <div className="bg-white rounded-xl shadow-sm overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="min-w-full divide-y divide-gray-200">
-              <thead className="bg-gray-50">
-                <tr>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Beneficiario / Póliza
-                  </th>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Fecha Límite
-                  </th>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Fecha de Pago
-                  </th>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Monto
-                  </th>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Método
-                  </th>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Estado
-                  </th>
-                  <th scope="col" className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Acciones
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
-                {pagosEmpresa.map((pago) => (
-                  <tr key={pago.id} className="hover:bg-gray-50 transition duration-150">
-                    <td className="px-6 py-4">
-                      <div className="text-sm font-medium text-gray-900">{pago.cliente}</div>
-                      <div className="text-sm text-gray-500">{pago.poliza}</div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm text-gray-900">{pago.fechaMaxima}</div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm text-gray-900">
-                        {pago.fechaPago || <span className="text-gray-400">No pagado</span>}
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm font-medium text-gray-900">{pago.monto}</div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="flex items-center">
-                        <FiDollarSign className="text-gray-400 mr-2" />
-                        <span className="text-sm text-gray-500">{pago.metodo}</span>
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      {pago.estado === "Completado" && (
-                        <span className="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                          Completado
-                        </span>
-                      )}
-                      {pago.estado === "Pendiente" && (
-                        <span className="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
-                          Pendiente
-                        </span>
-                      )}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                      <div className="flex justify-end space-x-3">
-                        <button className="text-blue-600 hover:text-blue-900">
-                          <FiEye className="h-5 w-5" />
-                        </button>
-                        <button className="text-gray-600 hover:text-gray-900">
-                          <FiEdit className="h-5 w-5" />
-                        </button>
-                        <button className="text-red-600 hover:text-red-900">
-                          <FiTrash2 className="h-5 w-5" />
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      {/* Pagination */}
+        </div>      {/* Pagination */}
       <div className="bg-white rounded-xl shadow-sm p-4 flex flex-col md:flex-row items-center justify-between">
         <div className="text-sm text-gray-500 mb-4 md:mb-0">
           Mostrando <span className="font-medium">1</span> a <span className="font-medium">5</span> de <span className="font-medium">8</span> resultados
