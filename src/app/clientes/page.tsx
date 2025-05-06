@@ -118,7 +118,7 @@ export default function ClientesPage() {
                     <Link href="/clientes/detalles/1" className="text-blue-600 hover:text-blue-900">
                       <FiEye className="h-5 w-5" />
                     </Link>
-                    <Link href="/clientes/1/editar" className="text-yellow-600 hover:text-yellow-900">
+                    <Link href="/clientes/editar/1" className="text-yellow-600 hover:text-yellow-900">
                       <FiEdit className="h-5 w-5" />
                     </Link>
                     <button className="text-red-600 hover:text-red-900">
@@ -159,7 +159,7 @@ export default function ClientesPage() {
                     <Link href="/clientes/detalles/2" className="text-blue-600 hover:text-blue-900">
                       <FiEye className="h-5 w-5" />
                     </Link>
-                    <Link href="/clientes/2/editar" className="text-yellow-600 hover:text-yellow-900">
+                    <Link href="/clientes/editar/2" className="text-yellow-600 hover:text-yellow-900">
                       <FiEdit className="h-5 w-5" />
                     </Link>
                     <button className="text-red-600 hover:text-red-900">
@@ -200,7 +200,7 @@ export default function ClientesPage() {
                     <Link href="/clientes/detalles/3" className="text-blue-600 hover:text-blue-900">
                       <FiEye className="h-5 w-5" />
                     </Link>
-                    <Link href="/clientes/3/editar" className="text-yellow-600 hover:text-yellow-900">
+                    <Link href="/clientes/editar/3" className="text-yellow-600 hover:text-yellow-900">
                       <FiEdit className="h-5 w-5" />
                     </Link>
                     <button className="text-red-600 hover:text-red-900">
