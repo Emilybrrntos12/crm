@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FiPlus, FiSearch, FiFilter, FiDownload, FiEye, FiEdit, FiTrash2, FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { FiPlus, FiSearch, FiFilter, FiDownload, FiEye, FiEdit, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 export default function ClientesPage() {
   return (
@@ -93,7 +93,7 @@ export default function ClientesPage() {
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
-              
+
               {/* Client 1 */}
               <tr className="hover:bg-gray-50 transition duration-150">
                 <td className="px-6 py-4 whitespace-nowrap">
