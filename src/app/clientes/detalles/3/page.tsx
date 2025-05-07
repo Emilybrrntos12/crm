@@ -1,10 +1,21 @@
 import { FaHome, FaShieldAlt, FaFire, FaTools, FaStar } from 'react-icons/fa';
 import { GiHouseKeys, GiWaterDrop } from 'react-icons/gi';
 import { IoMdFlash } from 'react-icons/io';
+import Link from 'next/link';
+import { FiHome } from 'react-icons/fi';
+
 
 export default function CreativeHomeInsurance() {
   return (
     <div className="max-w-5xl mx-auto p-6">
+    
+    <div className="flex justify-start mb-4">
+<Link href="/">
+  <button className="p-2 rounded-lg bg-white border border-gray-200 shadow-sm hover:bg-gray-50 transition duration-200">
+    <FiHome className="text-gray-600 h-5 w-5" />
+  </button>
+</Link>
+</div>
       {/* Tarjeta principal con efecto 3D */}
       <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
         {/* Encabezado con efecto de luz */}
@@ -14,8 +25,8 @@ export default function CreativeHomeInsurance() {
             <div className="inline-flex items-center justify-center mb-4 bg-white/20 p-5 rounded-full backdrop-blur-sm">
               <FaHome className="text-3xl text-white" />
             </div>
-            <h2 className="text-3xl font-bold mb-2">Escudo Hogar</h2>
-            <p className="text-blue-100 font-medium">Protección 360° para tu patrimonio</p>
+            <h2 className="text-3xl font-bold mb-2">Initech</h2>
+            <p className="text-blue-100 font-medium">Protección para tu patrimonio</p>
           </div>
         </div>
 
@@ -50,7 +61,7 @@ export default function CreativeHomeInsurance() {
                     <GiWaterDrop className="relative text-2xl text-blue-500 p-2" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-800">Inundación Express</h4>
+                    <h4 className="font-bold text-gray-800">Inundación</h4>
                     <p className="text-gray-600 text-sm">Hasta Q300,000</p>
                     <div className="mt-1 text-xs font-medium text-blue-500 bg-blue-50 px-2 py-1 rounded-full inline-block">
                       + Filtraciones cubiertas
@@ -64,7 +75,7 @@ export default function CreativeHomeInsurance() {
                     <GiHouseKeys className="relative text-2xl text-purple-500 p-2" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-800">Robo Plus</h4>
+                    <h4 className="font-bold text-gray-800">Robo</h4>
                     <p className="text-gray-600 text-sm">Contenido + estructura</p>
                     <div className="mt-1 text-xs font-medium text-purple-500 bg-purple-50 px-2 py-1 rounded-full inline-block">
                       + Reposición de llaves
@@ -79,9 +90,6 @@ export default function CreativeHomeInsurance() {
               <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-6 text-white shadow-lg">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="font-bold text-lg">Plan Estelar</h3>
-                  <div className="bg-white text-blue-600 text-xs font-bold px-3 py-1 rounded-full">
-                    RECOMENDADO
-                  </div>
                 </div>
 
                 <div className="mb-6">

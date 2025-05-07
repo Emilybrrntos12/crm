@@ -1,4 +1,4 @@
-import { FiPlus, FiSearch, FiDownload, FiEye, FiEdit, FiTrash2, FiChevronLeft, FiChevronRight, FiDollarSign, FiCreditCard, FiFilter, FiUser, FiFileText , FiCalendar} from 'react-icons/fi';
+import { FiPlus, FiSearch, FiDownload, FiEye, FiEdit, FiHome, FiTrash2, FiChevronLeft, FiChevronRight, FiDollarSign, FiCreditCard, FiFilter, FiUser, FiFileText , FiCalendar} from 'react-icons/fi';
 import Link from 'next/link';
 
 export default function PagosPage() {
@@ -41,6 +41,14 @@ export default function PagosPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 p-6">
+      {/* Botón de Home en la esquina superior izquierda */}
+<div className="flex justify-start mb-4">
+  <Link href="/">
+    <button className="p-2 rounded-lg bg-white border border-gray-200 shadow-sm hover:bg-gray-50 transition duration-200">
+      <FiHome className="text-gray-600 h-5 w-5" />
+    </button>
+  </Link>
+</div>
       {/* Header Section */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
         <div>

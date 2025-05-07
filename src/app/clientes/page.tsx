@@ -1,9 +1,17 @@
 import Link from "next/link";
-import { FiPlus, FiSearch, FiFilter, FiDownload, FiEye, FiEdit, FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { FiPlus, FiSearch, FiFilter, FiDownload, FiEye, FiHome, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 export default function ClientesPage() {
   return (
     <div className="min-h-screen bg-gray-50 p-6">
+      {/* Botón de Home en la esquina superior izquierda */}
+<div className="flex justify-start mb-4">
+  <Link href="/">
+    <button className="p-2 rounded-lg bg-white border border-gray-200 shadow-sm hover:bg-gray-50 transition duration-200">
+      <FiHome className="text-gray-600 h-5 w-5" />
+    </button>
+  </Link>
+</div>
       {/* Header Section */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
         <div>
@@ -131,9 +139,6 @@ export default function ClientesPage() {
                     <Link href="/clientes/detalles/1" className="text-blue-600 hover:text-blue-900">
                       <FiEye className="h-5 w-5" />
                     </Link>
-                    <Link href="/clientes/editar/1" className="text-yellow-600 hover:text-yellow-900">
-                      <FiEdit className="h-5 w-5" />
-                    </Link>
                   </div>
                 </td>
               </tr>
@@ -175,9 +180,6 @@ export default function ClientesPage() {
                     <Link href="/clientes/detalles/2" className="text-blue-600 hover:text-blue-900">
                       <FiEye className="h-5 w-5" />
                     </Link>
-                    <Link href="/clientes/editar/2" className="text-yellow-600 hover:text-yellow-900">
-                      <FiEdit className="h-5 w-5" />
-                    </Link>
                   </div>
                 </td>
               </tr>
@@ -218,9 +220,6 @@ export default function ClientesPage() {
                   <div className="flex justify-end space-x-3">
                     <Link href="/clientes/detalles/3" className="text-blue-600 hover:text-blue-900">
                       <FiEye className="h-5 w-5" />
-                    </Link>
-                    <Link href="/clientes/editar/3" className="text-yellow-600 hover:text-yellow-900">
-                      <FiEdit className="h-5 w-5" />
                     </Link>
                   </div>
                 </td>

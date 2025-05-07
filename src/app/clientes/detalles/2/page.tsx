@@ -1,9 +1,17 @@
 import Link from 'next/link';
 import { FaCar, FaCarCrash, FaTools, FaShieldAlt, FaGasPump, FaRoad, FaPhoneAlt, FaUserShield, FaMoneyBillWave, FaPercentage, FaHeadset } from 'react-icons/fa';
+import { FiHome } from 'react-icons/fi';
 
 export default function AutoInsurancePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+    <div className="min-h-screen bg-gray-50 p-6">
+    <div className="flex justify-start mb-4">
+<Link href="/">
+  <button className="p-2 rounded-lg bg-white border border-gray-200 shadow-sm hover:bg-gray-50 transition duration-200">
+    <FiHome className="text-gray-600 h-5 w-5" />
+  </button>
+</Link>
+</div>
       {/* Hero Section - Color verde esmeralda */}
       <div className="bg-gradient-to-r from-emerald-600 to-teal-500 text-white">
         <div className="container mx-auto px-4 py-16 md:py-24 text-center">
@@ -12,7 +20,7 @@ export default function AutoInsurancePage() {
               <FaCar className="text-white text-4xl" />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Seguro de Auto <span className="text-emerald-200">Total Protect</span>
+              Seguro de Auto <span className="text-emerald-200">Globex Inc</span>
             </h1>
             <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
               Protección integral para tu vehículo con las mejores coberturas y asistencia las 24 horas.

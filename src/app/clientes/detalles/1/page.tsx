@@ -1,9 +1,20 @@
 
+import Link from "next/link";
 import { FaHeartbeat, FaShieldAlt, FaUserShield, FaPiggyBank, FaHandshake, FaChartLine, FaHeadset, FaMoneyBillWave, FaPercentage, FaClinicMedical } from 'react-icons/fa';
+import { FiHome } from 'react-icons/fi';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+    <div className="min-h-screen bg-gray-50 p-6">
+      <div className="flex justify-start mb-4">
+  <Link href="/">
+    <button className="p-2 rounded-lg bg-white border border-gray-200 shadow-sm hover:bg-gray-50 transition duration-200">
+      <FiHome className="text-gray-600 h-5 w-5" />
+    </button>
+  </Link>
+</div>
+
+
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16 md:py-24 text-center">
         <div className="max-w-4xl mx-auto">

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FiSearch, FiFilter, FiDownload, FiEye, FiEdit, FiTrash2, FiChevronLeft, FiChevronRight, FiDollarSign, FiCheckCircle, FiClock, FiAlertCircle } from 'react-icons/fi';
+import { FiSearch, FiFilter, FiUser, FiHome, FiDownload, FiEye, FiEdit, FiTrash2, FiChevronLeft, FiChevronRight, FiDollarSign, FiCheckCircle, FiClock, FiAlertCircle } from 'react-icons/fi';
 
 export default function PagosClientesPage() {
   // Datos de ejemplo para pagos de siniestros
@@ -50,8 +50,18 @@ export default function PagosClientesPage() {
     }
   ];
 
+
   return (
     <div className="min-h-screen bg-gray-50 p-6">
+{/* Botón de Home en la esquina superior izquierda */}
+<div className="flex justify-start mb-4">
+  <Link href="/">
+    <button className="p-2 rounded-lg bg-white border border-gray-200 shadow-sm hover:bg-gray-50 transition duration-200">
+      <FiHome className="text-gray-600 h-5 w-5" />
+    </button>
+  </Link>
+</div>
+  
       {/* Header Section */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
         <div>
@@ -74,6 +84,22 @@ export default function PagosClientesPage() {
           </Link>
         </div>
       </div>
+
+          {/* Tabs */}
+<div className="bg-white rounded-lg shadow-xs border border-gray-200 mb-6">
+  <nav className="flex divide-x divide-gray-200">
+    <Link href="/pagos">
+      <button className="px-4 py-3 text-sm font-medium text-gray-500 hover:text-gray-700 flex items-center gap-2">
+        <FiUser className="text-gray-500" />
+        Pagos de Clientes
+      </button>
+    </Link>
+    <button className="px-4 py-3 text-sm font-medium text-blue-600 bg-blue-50 flex items-center gap-2">
+      <FiUser className="text-blue-600" />
+      Pagos a Clientes
+    </button>
+  </nav>
+</div>
 
       {/* Filters */}
       <div className="bg-white rounded-xl shadow-sm p-4 mb-6">
