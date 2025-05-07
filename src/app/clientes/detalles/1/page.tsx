@@ -1,4 +1,4 @@
-import Link from 'next/link';
+
 import { FaHeartbeat, FaShieldAlt, FaUserShield, FaPiggyBank, FaHandshake, FaChartLine, FaHeadset, FaMoneyBillWave, FaPercentage, FaClinicMedical } from 'react-icons/fa';
 
 export default function HomePage() {
