@@ -34,7 +34,7 @@ export default function PagosClientesPage() {
       metodo: "Transferencia",
       fechaMaxima: "30/04/2025",
       fechaPago: "",
-      estado: "Vencido",
+      estado: "Pendiente",
       siniestro: "SIN-2025-003"
     },
     {

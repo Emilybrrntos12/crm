@@ -1,46 +1,277 @@
+import { 
+  FaShieldAlt, 
+  FaCar, 
+  FaHome, 
+  FaHeartbeat, 
+  FaChartBar,
+  FaSearch,
+  FaFilter,
+  FaPlus,
+  FaChevronRight,
+  FaBuilding,
+  FaPhone,
+  FaGlobe,
+  FaStar
+} from 'react-icons/fa';
+import Link from 'next/link';
+
 export default function AseguradorasPage() {
-    return (
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-gray-800 mb-8">Catálogo de Aseguradoras</h1>
-  
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Tarjeta de aseguradora - repetir para cada aseguradora */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow">
-            <div className="bg-blue-600 h-3"></div>
+  // Datos de aseguradoras
+  const aseguradoras = [
+    {
+      id: 1,
+      nombre: 'Seguros Atlas',
+      descripcion: 'Líder en seguros de automóviles con cobertura nacional',
+      productos: ['Autos', 'Hogar', 'Vida'],
+      productosCount: 15,
+      rating: 4.5,
+      telefono: '800 123 4567',
+      website: 'www.segurosatlas.com',
+      color: 'bg-blue-600',
+      icon: <FaShieldAlt className="text-blue-600" />
+    },
+    {
+      id: 2,
+      nombre: 'Protección Total',
+      descripcion: 'Especialistas en seguros para empresas y pymes',
+      productos: ['Empresas', 'Responsabilidad Civil', 'Salud'],
+      productosCount: 12,
+      rating: 4.2,
+      telefono: '800 765 4321',
+      website: 'www.protecciontotal.com',
+      color: 'bg-green-600',
+      icon: <FaBuilding className="text-green-600" />
+    },
+    {
+      id: 3,
+      nombre: 'Vida Segura',
+      descripcion: 'Expertos en seguros de vida y gastos médicos mayores',
+      productos: ['Vida', 'Salud', 'Accidentes'],
+      productosCount: 8,
+      rating: 4.7,
+      telefono: '800 987 6543',
+      website: 'www.vidasegura.com',
+      color: 'bg-purple-600',
+      icon: <FaHeartbeat className="text-purple-600" />
+    },
+    {
+      id: 4,
+      nombre: 'Resguardo Hogar',
+      descripcion: 'Protección especializada para tu patrimonio familiar',
+      productos: ['Hogar', 'Electrodomésticos', 'Joyas'],
+      productosCount: 6,
+      rating: 4.3,
+      telefono: '800 456 7890',
+      website: 'www.resguardohogar.com',
+      color: 'bg-orange-600',
+      icon: <FaHome className="text-orange-600" />
+    },
+    {
+      id: 5,
+      nombre: 'AutoPro',
+      descripcion: 'Seguros vehiculares con las mejores coberturas',
+      productos: ['Autos', 'Motos', 'Flotillas'],
+      productosCount: 10,
+      rating: 4.4,
+      telefono: '800 321 6547',
+      website: 'www.autopro.com',
+      color: 'bg-red-600',
+      icon: <FaCar className="text-red-600" />
+    },
+    {
+      id: 6,
+      nombre: 'Global Risk',
+      descripcion: 'Soluciones integrales para riesgos complejos',
+      productos: ['Empresas', 'Viajes', 'Marítimo'],
+      productosCount: 18,
+      rating: 4.1,
+      telefono: '800 159 3578',
+      website: 'www.globalrisk.com',
+      color: 'bg-indigo-600',
+      icon: <FaGlobe className="text-indigo-600" />
+    }
+  ];
+
+  // Colores para etiquetas de productos
+  const tagColors = {
+    'Autos': 'bg-blue-100 text-blue-800',
+    'Hogar': 'bg-green-100 text-green-800',
+    'Vida': 'bg-purple-100 text-purple-800',
+    'Empresas': 'bg-yellow-100 text-yellow-800',
+    'Salud': 'bg-pink-100 text-pink-800',
+    'Responsabilidad Civil': 'bg-gray-100 text-gray-800',
+    'Accidentes': 'bg-red-100 text-red-800',
+    'Electrodomésticos': 'bg-orange-100 text-orange-800',
+    'Joyas': 'bg-amber-100 text-amber-800',
+    'Motos': 'bg-lime-100 text-lime-800',
+    'Flotillas': 'bg-emerald-100 text-emerald-800',
+    'Viajes': 'bg-cyan-100 text-cyan-800',
+    'Marítimo': 'bg-indigo-100 text-indigo-800'
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-50 p-6">
+      {/* Header superior */}
+      <div className="flex justify-between items-center mb-6">
+        <Link href="/">
+          <button className="p-2 rounded-lg bg-white border border-gray-200 shadow-sm hover:bg-gray-50 transition duration-200">
+            <FaHome className="text-gray-600 h-5 w-5" />
+          </button>
+        </Link>
+        <div className="flex items-center gap-3">
+          <button className="p-2 rounded-lg bg-white border border-gray-200 shadow-sm hover:bg-gray-50 text-gray-600">
+            <FaFilter className="h-5 w-5" />
+          </button>
+          <button className="p-2 rounded-lg bg-white border border-gray-200 shadow-sm hover:bg-gray-50 text-gray-600">
+            <FaSearch className="h-5 w-5" />
+          </button>
+        </div>
+      </div>
+
+      {/* Header principal */}
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+        <div>
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-800">Catálogo de Aseguradoras</h1>
+          <p className="text-gray-600 mt-1">Explora nuestras compañías aseguradoras aliadas</p>
+        </div>
+        <button className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors shadow-sm">
+          <FaPlus />
+          <span>Agregar Aseguradora</span>
+        </button>
+      </div>
+
+      {/* Filtros */}
+      <div className="bg-white rounded-xl shadow-sm p-5 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div className="relative">
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <FaSearch className="text-gray-400" />
+            </div>
+            <input
+              type="text"
+              placeholder="Buscar aseguradoras..."
+              className="block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+            />
+          </div>
+          
+          <div className="relative">
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <FaFilter className="text-gray-400" />
+            </div>
+            <select className="block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none text-sm">
+              <option>Todos los tipos</option>
+              <option>Autos</option>
+              <option>Hogar</option>
+              <option>Vida</option>
+              <option>Empresas</option>
+            </select>
+          </div>
+          
+          <select className="block w-full px-3 py-2.5 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+            <option>Calificación: Todas</option>
+            <option>5 estrellas</option>
+            <option>4+ estrellas</option>
+            <option>3+ estrellas</option>
+          </select>
+          
+          <button className="px-4 py-2.5 border border-gray-300 rounded-lg bg-white text-gray-700 hover:bg-gray-50 flex items-center justify-center gap-2 text-sm">
+            <FaFilter />
+            <span>Filtros avanzados</span>
+          </button>
+        </div>
+      </div>
+
+      {/* Grid de aseguradoras */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        {aseguradoras.map((aseguradora) => (
+          <div key={aseguradora.id} className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+            {/* Barra superior de color */}
+            <div className={`h-2 ${aseguradora.color}`}></div>
+            
             <div className="p-6">
-              <div className="flex items-center mb-4">
-                <div className="bg-blue-100 p-3 rounded-full mr-4">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
+              {/* Header de la tarjeta */}
+              <div className="flex items-start mb-4">
+                <div className={`bg-white p-3 rounded-lg shadow-sm border border-gray-200 mr-4 ${aseguradora.color.replace('bg-', 'text-')}`}>
+                  {aseguradora.icon}
                 </div>
-                <h2 className="text-xl font-semibold text-gray-800">Seguros Atlas</h2>
+                <div>
+                  <h2 className="text-xl font-semibold text-gray-800">{aseguradora.nombre}</h2>
+                  <div className="flex items-center mt-1">
+                    {[...Array(5)].map((_, i) => (
+                      <FaStar 
+                        key={i} 
+                        className={`h-4 w-4 ${i < Math.floor(aseguradora.rating) ? 'text-yellow-400' : 'text-gray-300'}`}
+                      />
+                    ))}
+                    <span className="text-sm text-gray-500 ml-1">({aseguradora.rating})</span>
+                  </div>
+                </div>
               </div>
-              <p className="text-gray-600 mb-4">Ofrece coberturas para automóviles, hogar y vida.</p>
+              
+              {/* Descripción */}
+              <p className="text-gray-600 mb-4">{aseguradora.descripcion}</p>
+              
+              {/* Productos */}
               <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Autos</span>
-                <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Hogar</span>
-                <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Vida</span>
+                {aseguradora.productos.map((producto) => (
+                  <span key={producto} className={`text-xs px-2 py-1 rounded ${tagColors[producto as keyof typeof tagColors] || 'bg-gray-100 text-gray-800'}`}>
+                    {producto}
+                  </span>
+                ))}
               </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-500">15 productos</span>
-                <button className="text-blue-600 hover:text-blue-800 text-sm font-medium">Ver productos</button>
+              
+              {/* Información de contacto */}
+              <div className="space-y-2 text-sm text-gray-600 mb-4">
+                <div className="flex items-center">
+                  <FaPhone className="mr-2 text-gray-400" />
+                  <span>{aseguradora.telefono}</span>
+                </div>
+                <div className="flex items-center">
+                  <FaGlobe className="mr-2 text-gray-400" />
+                  <a href={`https://${aseguradora.website}`} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                    {aseguradora.website}
+                  </a>
+                </div>
+              </div>
+              
+              {/* Footer */}
+              <div className="flex justify-between items-center pt-3 border-t border-gray-100">
+                <span className="text-sm text-gray-500">{aseguradora.productosCount} productos</span>
+                <Link href={`/aseguradoras/${aseguradora.id}`}>
+                  <button className="flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium">
+                    Ver detalles <FaChevronRight className="ml-1 h-3 w-3" />
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
-  
-          {/* Otras aseguradoras... */}
+        ))}
+      </div>
+
+      {/* Gráfico de productos */}
+      <div className="bg-white rounded-xl shadow-sm overflow-hidden mb-8">
+        <div className="p-5 border-b">
+          <h2 className="text-lg font-semibold text-gray-800">Productos por Aseguradora</h2>
         </div>
-  
-        <div className="mt-8 bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4">Productos por Aseguradora</h2>
-          <div className="h-64">
-            {/* Aquí iría un gráfico de barras con Chart.js o similar */}
-            <div className="flex items-center justify-center h-full bg-gray-100 rounded">
+        <div className="p-6">
+          <div className="h-64 bg-gray-50 rounded-lg flex items-center justify-center">
+            <div className="text-center">
+              <FaChartBar className="mx-auto text-gray-300 h-12 w-12 mb-2" />
               <p className="text-gray-500">Gráfico de productos por aseguradora</p>
+              <p className="text-sm text-gray-400 mt-1">Visualización de datos interactiva</p>
             </div>
           </div>
         </div>
       </div>
-    );
-  }
+
+      {/* CTA */}
+      <div className="bg-blue-50 rounded-xl p-6 text-center">
+        <h3 className="text-lg font-medium text-gray-800 mb-2">¿No encuentras lo que buscas?</h3>
+        <p className="text-gray-600 mb-4">Contáctanos para ayudarte a encontrar la aseguradora perfecta para tus necesidades</p>
+        <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+          Solicitar asesoría
+        </button>
+      </div>
+    </div>
+  );
+}
