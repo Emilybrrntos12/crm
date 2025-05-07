@@ -6,7 +6,6 @@ import {
   FaCheckCircle,
   FaClock,
   FaTimesCircle,
-  FaPauseCircle,
   FaPlus,
   FaFilter,
   FaChevronLeft,
@@ -14,8 +13,7 @@ import {
   FaHome,
   FaDownload,
   FaEllipsisV,
-  FaUserShield,
-  FaFileMedical
+  FaUserShield
 } from 'react-icons/fa';
 import Link from 'next/link';
 
