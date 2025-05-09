@@ -93,6 +93,9 @@ export default function ClientesPage() {
                   Empresa
                 </th>
                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Agente
+                </th>
+                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Estado
                 </th>
                 <th scope="col" className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -129,6 +132,10 @@ export default function ClientesPage() {
                   <div className="text-sm font-medium text-gray-900">Acme Corp</div>
                   <div className="text-sm text-gray-500">Cliente desde: 2023</div>
                 </td>
+              <td className="px-6 py-4 whitespace-nowrap">
+                <div className="text-sm font-medium text-gray-900">Laura Gómez</div>
+                <div className="text-sm text-gray-500">ID: AGT-007</div>
+              </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
                     Activo
@@ -170,6 +177,10 @@ export default function ClientesPage() {
                   <div className="text-sm font-medium text-gray-900">Globex Inc</div>
                   <div className="text-sm text-gray-500">Cliente desde: 2022</div>
                 </td>
+              <td className="px-6 py-4 whitespace-nowrap">
+                <div className="text-sm font-medium text-gray-900">Carlos Méndez</div>
+                <div className="text-sm text-gray-500">ID: AGT-005</div>
+              </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
                     Activo
@@ -211,6 +222,10 @@ export default function ClientesPage() {
                   <div className="text-sm font-medium text-gray-900">Initech</div>
                   <div className="text-sm text-gray-500">Cliente desde: 2021</div>
                 </td>
+              <td className="px-6 py-4 whitespace-nowrap">
+                <div className="text-sm font-medium text-gray-900">Laura Gómez</div>
+                <div className="text-sm text-gray-500">ID: AGT-005</div>
+              </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
                     Inactivo

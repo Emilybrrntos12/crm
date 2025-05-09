@@ -110,6 +110,17 @@ export default function NuevoPage() {
               </select>
             </div>
 
+            <label className="block text-sm font-medium text-gray-700 mb-1">Agente asignado</label>
+            <select 
+                className="block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-800"
+                required
+              >
+                <option>Selecciona un agente</option>
+                <option>Carlos Méndez</option>
+                <option>Laura Gómez</option>
+              </select>
+
+
             {/* Nuevo campo: Tipo de Seguro */}
             <div className="space-y-2">
               <label className="block text-sm font-medium text-gray-700">
