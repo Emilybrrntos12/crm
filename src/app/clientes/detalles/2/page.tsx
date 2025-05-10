@@ -1,148 +1,247 @@
 import Link from 'next/link';
-import { FaCar, FaCarCrash, FaTools, FaShieldAlt, FaGasPump, FaRoad, FaPhoneAlt, FaUserShield, FaMoneyBillWave, FaPercentage, FaHeadset } from 'react-icons/fa';
-import { FiHome } from 'react-icons/fi';
+import { FiHome, FiUser, FiMail, FiPhone, FiCreditCard, FiEdit } from 'react-icons/fi';
+import { FaCar, FaCarCrash, FaTools, FaShieldAlt, FaUserShield, FaFileContract, FaMoneyBillWave } from 'react-icons/fa';
 
-export default function AutoInsurancePage() {
+export default function ClientAutoInsuranceProfile() {
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
-    <div className="flex justify-start mb-4">
-<Link href="/">
-  <button className="p-2 rounded-lg bg-white border border-gray-200 shadow-sm hover:bg-gray-50 transition duration-200">
-    <FiHome className="text-gray-600 h-5 w-5" />
-  </button>
-</Link>
-</div>
-      {/* Hero Section - Color verde esmeralda */}
-      <div className="bg-gradient-to-r from-emerald-600 to-teal-500 text-white">
-        <div className="container mx-auto px-4 py-16 md:py-24 text-center">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white bg-opacity-20 p-2 rounded-full w-24 h-24 mx-auto shadow-md flex items-center justify-center mb-6">
-              <FaCar className="text-white text-4xl" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Seguro de Auto <span className="text-emerald-200">Globex Inc</span>
-            </h1>
-            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              Protección integral para tu vehículo con las mejores coberturas y asistencia las 24 horas.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/cotizar" className="bg-white hover:bg-gray-100 text-emerald-600 font-medium py-3 px-8 rounded-lg transition duration-300 shadow-lg">
-                Cotizar Ahora
-              </Link>
-              <Link href="/coberturas" className="bg-transparent hover:bg-white hover:bg-opacity-20 text-white font-medium py-3 px-8 rounded-lg border border-white transition duration-300">
-                Ver Coberturas
-              </Link>
-            </div>
-          </div>
-        </div>
+    <div className="min-h-screen bg-gray-50 p-4 md:p-8">
+      {/* Botón de regreso */}
+      <div className="flex justify-between items-center mb-6">
+        <Link href="/">
+          <button className="p-2 rounded-lg bg-white border border-gray-200 shadow-sm hover:bg-gray-50 transition duration-200">
+            <FiHome className="text-gray-600 h-5 w-5" />
+          </button>
+        </Link>
+        <button className="p-2 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 transition duration-200 flex items-center">
+          <FiEdit className="mr-2" /> Editar
+        </button>
       </div>
 
-      {/* Coberturas Principales - Color azul oscuro */}
-      <div className="bg-slate-800 text-white py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Coberturas Incluidas</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-slate-700 p-6 rounded-lg border border-slate-600">
-              <div className="text-3xl mb-4 text-emerald-400">
-                <FaCarCrash />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Daños Materiales</h3>
-              <p className="text-slate-300">Reparación de tu auto por accidente o colisión</p>
-              <div className="mt-4 font-bold text-emerald-400">100% del valor comercial</div>
-            </div>
-            
-            <div className="bg-slate-700 p-6 rounded-lg border border-slate-600">
-              <div className="text-3xl mb-4 text-emerald-400">
-                <FaUserShield />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Responsabilidad Civil</h3>
-              <p className="text-slate-300">Daños a terceros en sus bienes o personas</p>
-              <div className="mt-4 font-bold text-emerald-400">Hasta Q5,000,000</div>
-            </div>
-            
-            <div className="bg-slate-700 p-6 rounded-lg border border-slate-600">
-              <div className="text-3xl mb-4 text-emerald-400">
-                <FaTools />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Asistencia Vial</h3>
-              <p className="text-slate-300">Grúa, paso de corriente, servicio de cerrajería</p>
-              <div className="mt-4 font-bold text-emerald-400">Ilimitado 24/7</div>
-            </div>
-          </div>
+      {/* Contenedor principal */}
+      <div className="container mx-auto">
+        {/* Encabezado */}
+        <div className="text-center mb-8">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+            Perfil del Cliente
+          </h1>
+          <p className="text-lg text-gray-600">
+            Información personal y detalles de la póliza de auto
+          </p>
         </div>
-      </div>
 
-      {/* Detalles del Plan - Color blanco */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-5xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
-          <div className="bg-slate-800 p-8 text-center">
-            <h2 className="text-2xl font-bold text-white">Detalles del Plan PREMIUM</h2>
-          </div>
-          
-          <div className="p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Columna de Beneficios Adicionales */}
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Beneficios Extra</h3>
-              <ul className="space-y-5 text-gray-800">
-                <li className="flex items-start">
-                  <FaGasPump className="text-emerald-500 mt-1 mr-3 flex-shrink-0 text-xl" />
-                  <div>
-                    <strong className="block">Gasolina de emergencia</strong>
-                    <span>Hasta 10 litros gratis por año</span>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <FaRoad className="text-emerald-500 mt-1 mr-3 flex-shrink-0 text-xl" />
-                  <div>
-                    <strong className="block">Auto sustituto</strong>
-                    <span>5 días por reparación mayor</span>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <FaPhoneAlt className="text-emerald-500 mt-1 mr-3 flex-shrink-0 text-xl" />
-                  <div>
-                    <strong className="block">Asistencia médica</strong>
-                    <span>Telemedicina incluida</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            
-            {/* Columna de Detalles Financieros */}
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Información Financiera</h3>
-              <div className="space-y-5">
-                <div className="bg-gray-50 p-5 rounded-lg border border-gray-200">
-                  <div className="flex items-center gap-3">
-                    <FaMoneyBillWave className="text-emerald-500 text-xl" />
+        {/* Grid de dos columnas */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Columna izquierda - Información del cliente */}
+          <div className="lg:col-span-1 space-y-6">
+            {/* Tarjeta de foto y datos básicos */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="bg-gradient-to-r from-emerald-500 to-teal-400 p-6 text-center">
+                <div className="w-32 h-32 rounded-full bg-white border-4 border-white shadow-md mx-auto flex items-center justify-center overflow-hidden">
+                  <FiUser className="text-emerald-500 text-5xl" />
+                </div>
+                <h2 className="text-xl font-bold text-white mt-4">María José García López</h2>
+                <p className="text-emerald-100">Cliente desde: Ene 2022</p>
+              </div>
+              
+              <div className="p-6">
+                <div className="space-y-4">
+                  <div className="flex items-start">
+                    <FiCreditCard className="text-gray-500 mt-1 mr-3 flex-shrink-0" />
                     <div>
-                      <div className="font-medium text-gray-800">Prima Mensual</div>
-                      <div className="text-2xl font-bold text-gray-900">Q750 <span className="text-sm text-gray-600">+ IVA</span></div>
+                      <p className="text-sm text-gray-500">Número de cliente</p>
+                      <p className="font-medium text-gray-400">AUT-789456</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <FiMail className="text-gray-500 mt-1 mr-3 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm text-gray-500">Correo electrónico</p>
+                      <p className="font-medium text-gray-400">maria.garcia@example.com</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <FiPhone className="text-gray-500 mt-1 mr-3 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm text-gray-500">Teléfonos</p>
+                      <p className="font-medium text-gray-400">+502 1234 5678</p>
+                      <p className="font-medium text-gray-400">+502 8765 4321</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Tarjeta de información adicional */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="bg-gray-800 p-4 text-white font-medium flex items-center">
+                <FiUser className="mr-2" /> Datos Adicionales
+              </div>
+              
+              <div className="p-6">
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-sm text-gray-500">Fecha de nacimiento</p>
+                    <p className="font-medium text-gray-400">15/03/1985</p>
+                  </div>
+                  
+                  <div>
+                    <p className="text-sm text-gray-500">DPI</p>
+                    <p className="font-medium text-gray-400">1234 56789 0101</p>
+                  </div>
+                  
+                  <div>
+                    <p className="text-sm text-gray-500">Estado civil</p>
+                    <p className="font-medium text-gray-400">Casada</p>
+                  </div>
+                  
+                  <div>
+                    <p className="text-sm text-gray-500">Dirección</p>
+                    <p className="font-medium text-gray-400">12 Calle 3-45, Zona 10</p>
+                    <p className="font-medium text-gray-400">Ciudad de Guatemala</p>
+                  </div>
+                  
+                  <div>
+                    <p className="text-sm text-gray-500">Ocupación</p>
+                    <p className="font-medium text-gray-400">Ingeniera Industrial</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Columna derecha - Información del seguro */}
+          <div className="lg:col-span-2 space-y-6">
+            {/* Tarjeta de información del vehículo */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="bg-gradient-to-r from-blue-600 to-blue-500 p-6 text-white">
+                <h2 className="text-2xl font-bold flex items-center">
+                  <FaCar className="mr-3" />
+                  Vehículo Asegurado
+                </h2>
+              </div>
+              
+              <div className="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                  <p className="text-sm text-gray-500">Marca/Modelo</p>
+                  <p className="font-medium text-lg text-gray-400">Toyota RAV4 2021</p>
+                </div>
+                
+                <div>
+                  <p className="text-sm text-gray-500">Placas</p>
+                  <p className="font-medium text-lg text-gray-400">P 789ABC</p>
+                </div>
+                
+                <div>
+                  <p className="text-sm text-gray-500">Color</p>
+                  <p className="font-medium text-lg text-gray-400">Rojo</p>
+                </div>
+                
+                <div>
+                  <p className="text-sm text-gray-500">VIN</p>
+                  <p className="font-medium text-gray-400">JTMBFREV80D123456</p>
+                </div>
+                
+                <div>
+                  <p className="text-sm text-gray-500">Uso</p>
+                  <p className="font-medium text-gray-400">Particular</p>
+                </div>
+                
+                <div>
+                  <p className="text-sm text-gray-500">Kilometraje</p>
+                  <p className="font-medium text-gray-400">35,000 km</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Tarjeta de información de la póliza */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="bg-gradient-to-r from-emerald-600 to-emerald-500 p-6 text-white">
+                <h2 className="text-2xl font-bold flex items-center">
+                  <FaFileContract className="mr-3" />
+                  Póliza de Seguro
+                </h2>
+              </div>
+              
+              <div className="p-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                  <div className="bg-emerald-50 p-4 rounded-lg border border-emerald-100">
+                    <p className="text-sm text-emerald-800 font-medium">Número de póliza</p>
+                    <p className="text-xl font-bold text-gray-400">AUT-2023-789456</p>
+                  </div>
+                  
+                  <div className="bg-emerald-50 p-4 rounded-lg border border-emerald-100">
+                    <p className="text-sm text-emerald-800 font-medium">Estado</p>
+                    <p className="text-xl font-bold text-emerald-600">Activa</p>
+                  </div>
+                  
+                  <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                    <p className="text-sm text-blue-800 font-medium">Vigencia</p>
+                    <p className="text-lg font-medium text-gray-400">15/01/2023 - 15/01/2024</p>
+                  </div>
+                  
+                  <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                    <p className="text-sm text-blue-800 font-medium">Forma de pago</p>
+                    <p className="text-lg font-medium text-gray-400">Débito automático</p>
+                  </div>
+                </div>
+                
+                {/* Coberturas */}
+                <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                  <FaShieldAlt className="text-emerald-500 mr-2" />
+                  Coberturas Contratadas
+                </h3>
+                
+                <div className="space-y-4">
+                  <div className="flex items-start p-4 bg-gray-50 rounded-lg border border-gray-200">
+                    <FaCarCrash className="text-emerald-500 mt-1 mr-3 flex-shrink-0 text-xl" />
+                    <div>
+                      <strong className="block text-gray-800">Daños Materiales</strong>
+                      <p className="text-gray-600">Valor comercial completo (Q150,000)</p>
+                      <p className="text-sm text-gray-500 mt-1">Deducible: 5% (mínimo Q2,500)</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start p-4 bg-gray-50 rounded-lg border border-gray-200">
+                    <FaUserShield className="text-emerald-500 mt-1 mr-3 flex-shrink-0 text-xl" />
+                    <div>
+                      <strong className="block text-gray-800">Responsabilidad Civil</strong>
+                      <p className="text-gray-600">Hasta Q5,000,000 por daños a terceros</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start p-4 bg-gray-50 rounded-lg border border-gray-200">
+                    <FaTools className="text-emerald-500 mt-1 mr-3 flex-shrink-0 text-xl" />
+                    <div>
+                      <strong className="block text-gray-800">Asistencia Vial</strong>
+                      <p className="text-gray-600">Servicios ilimitados 24/7</p>
+                      <p className="text-sm text-gray-500 mt-1">Incluye grúa, paso de corriente, cerrajería</p>
                     </div>
                   </div>
                 </div>
                 
-                <div className="bg-gray-50 p-5 rounded-lg border border-gray-200">
-                  <div className="flex items-center gap-3">
-                    <FaPercentage className="text-emerald-500 text-xl" />
-                    <div>
-                      <div className="font-medium text-gray-800">Deducible</div>
-                      <div className="text-xl font-bold text-gray-900">10% del monto reclamado</div>
-                      <div className="text-sm text-gray-600">(Mínimo Q3,000)</div>
-                    </div>
-                  </div>
-                </div>
+                {/* Detalles de pago */}
+                <h3 className="text-xl font-semibold text-gray-800 mt-8 mb-4 flex items-center">
+                  <FaMoneyBillWave className="text-emerald-500 mr-2" />
+                  Información de Pagos
+                </h3>
                 
-                <div className="bg-gray-50 p-5 rounded-lg border border-gray-200">
-                  <div className="flex items-center gap-3">
-                    <FaShieldAlt className="text-emerald-500 text-xl" />
-                    <div>
-                      <div className="font-medium text-gray-800">Descuento por no siniestros</div>
-                      <div className="text-gray-900">
-                        <span className="font-bold">15% menos</span> al renovar
-                      </div>
-                    </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="bg-emerald-50 p-4 rounded-lg border border-emerald-100">
+                    <p className="text-sm text-emerald-800 font-medium">Prima mensual</p>
+                    <p className="text-2xl font-bold text-gray-400">Q850.00</p>
+                    <p className="text-sm text-gray-600">+ IVA</p>
+                  </div>
+                  
+                  <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                    <p className="text-sm text-blue-800 font-medium">Próximo pago</p>
+                    <p className="text-xl font-medium text-gray-400">15/11/2023</p>
+                  </div>
+                  
+                  <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                    <p className="text-sm text-blue-800 font-medium">Método de pago</p>
+                    <p className="text-xl font-medium text-gray-400">Tarjeta **** 4567</p>
                   </div>
                 </div>
               </div>
@@ -150,41 +249,6 @@ export default function AutoInsurancePage() {
           </div>
         </div>
       </div>
-
-      {/* Beneficios Adicionales - Color verde claro */}
-      <div className="bg-emerald-50 py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Ventajas Exclusivas</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white p-6 rounded-lg shadow-md border border-emerald-100">
-              <div className="text-emerald-600 text-3xl mb-4">
-                <FaUserShield />
-              </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">Protección Legal</h3>
-              <p className="text-gray-700">Defensa jurídica en caso de accidente</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md border border-emerald-100">
-              <div className="text-emerald-600 text-3xl mb-4">
-                <FaCar />
-              </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">Vidrios y Cerraduras</h3>
-              <p className="text-gray-700">Reposición sin costo adicional</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md border border-emerald-100">
-              <div className="text-emerald-600 text-3xl mb-4">
-                <FaHeadset />
-              </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">Asistencia Personalizada</h3>
-              <p className="text-gray-700">Asesor dedicado las 24 horas</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* CTA Final - Color verde esmeralda */}
-          </div>
+    </div>
   );
 }

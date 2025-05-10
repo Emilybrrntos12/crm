@@ -1,144 +1,260 @@
-import { FaHome, FaShieldAlt, FaFire, FaTools, FaStar } from 'react-icons/fa';
-import { GiHouseKeys, GiWaterDrop } from 'react-icons/gi';
-import { IoMdFlash } from 'react-icons/io';
+import { FaShieldAlt, FaFire, FaUser, FaEnvelope, FaPhone, FaMapMarkerAlt, FaIdCard, FaFileAlt, FaMoneyBillWave } from 'react-icons/fa';
+import { GiHouse, GiWaterFlask, GiPadlock } from 'react-icons/gi';
 import Link from 'next/link';
-import { FiHome } from 'react-icons/fi';
+import { FiHome, FiEdit2 } from 'react-icons/fi';
 
-
-export default function CreativeHomeInsurance() {
+export default function ClientHomeInsuranceProfile() {
   return (
-    <div className="max-w-5xl mx-auto p-6">
-    
-    <div className="flex justify-start mb-4">
-<Link href="/">
-  <button className="p-2 rounded-lg bg-white border border-gray-200 shadow-sm hover:bg-gray-50 transition duration-200">
-    <FiHome className="text-gray-600 h-5 w-5" />
-  </button>
-</Link>
-</div>
-      {/* Tarjeta principal con efecto 3D */}
-      <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
-        {/* Encabezado con efecto de luz */}
-        <div className="relative bg-blue-700 p-8 text-center text-white overflow-hidden">
-          <div className="absolute -top-20 -right-20 w-40 h-40 bg-blue-500 rounded-full filter blur-3xl opacity-30"></div>
-          <div className="relative z-10">
-            <div className="inline-flex items-center justify-center mb-4 bg-white/20 p-5 rounded-full backdrop-blur-sm">
-              <FaHome className="text-3xl text-white" />
-            </div>
-            <h2 className="text-3xl font-bold mb-2">Initech</h2>
-            <p className="text-blue-100 font-medium">Protección para tu patrimonio</p>
-          </div>
-        </div>
+    <div className="min-h-screen bg-slate-50 p-4 md:p-6">
+      {/* Barra superior minimalista */}
+      <div className="flex justify-between items-center mb-8">
+        <Link href="/">
+          <button className="p-2 rounded-full bg-white shadow-sm hover:bg-slate-100 transition duration-200 text-slate-600">
+            <FiHome className="h-5 w-5" />
+          </button>
+        </Link>
+        <button className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-slate-800">
+          <FiEdit2 /> Editar perfil
+        </button>
+      </div>
 
-        {/* Contenido con diseño de burbujas */}
-        <div className="p-8 bg-white/90 backdrop-blur-sm">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            {/* Beneficios con iconos creativos */}
-            <div>
-              <h3 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-                <FaStar className="text-yellow-400" />
-                <span>Protecciones Destacadas</span>
+      {/* Contenedor principal con layout asimétrico */}
+      <div className="max-w-6xl mx-auto">
+        {/* Encabezado con tipografía moderna */}
+
+        {/* Grid con proporción 40/60 */}
+        <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-8">
+          {/* Columna izquierda - Perfil del cliente */}
+          <div className="space-y-6">
+            {/* Tarjeta de perfil con diseño de tarjeta de presentación */}
+            <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-slate-100">
+              <div className="bg-gradient-to-r from-slate-800 to-slate-700 p-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-inner">
+                    <FaUser className="text-slate-700 text-2xl" />
+                  </div>
+                  <div>
+                    <h2 className="text-xl font-bold text-white">Ana Lucía Ramírez</h2>
+                    <p className="text-slate-300 text-sm">Cliente desde Junio 2020</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="p-6">
+                <div className="space-y-5">
+                  <div className="flex items-start gap-3">
+                    <div className="p-2 bg-amber-50 rounded-lg text-amber-600">
+                      <FaIdCard />
+                    </div>
+                    <div>
+                      <p className="text-xs text-slate-700 uppercase font-medium">Identificación</p>
+                      <p className="font-medium text-slate-500">2389 45673 0101</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <div className="p-2 bg-blue-50 rounded-lg text-blue-600">
+                      <FaEnvelope />
+                    </div>
+                    <div>
+                      <p className="text-xs text-slate-500 uppercase font-medium">Correo</p>
+                      <p className="font-medium">ana.ramirez@example.com</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <div className="p-2 bg-green-50 rounded-lg text-green-600">
+                      <FaPhone />
+                    </div>
+                    <div>
+                      <p className="text-xs text-slate-500 uppercase font-medium">Teléfonos</p>
+                      <p className="font-medium">+502 7890 1234</p>
+                      <p className="font-medium">+502 7890 5678</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <div className="p-2 bg-purple-50 rounded-lg text-purple-600">
+                      <FaMapMarkerAlt />
+                    </div>
+                    <div>
+                      <p className="text-xs text-slate-500 uppercase font-medium">Dirección</p>
+                      <p className="font-medium">8a. Calle 15-63, Zona 10</p>
+                      <p className="font-medium">Ciudad de Guatemala</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Tarjeta de información adicional */}
+            <div className="bg-white rounded-2xl shadow-md p-6 border border-slate-100">
+              <h3 className="font-bold text-slate-800 mb-4 flex items-center gap-2">
+                <FaFileAlt className="text-slate-600" />
+                <span>Detalles Adicionales</span>
               </h3>
               
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="relative">
-                    <div className="absolute -inset-3 bg-red-100 rounded-full opacity-70"></div>
-                    <FaFire className="relative text-2xl text-red-500 p-2" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-800">Incendio Total</h4>
-                    <p className="text-gray-600 text-sm">Valor completo de tu vivienda</p>
-                    <div className="mt-1 text-xs font-medium text-red-500 bg-red-50 px-2 py-1 rounded-full inline-block">
-                      + Daños por humo
-                    </div>
-                  </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <p className="text-xs text-slate-500 uppercase font-medium">Estado Civil</p>
+                  <p className="font-medium">Soltera</p>
                 </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="relative">
-                    <div className="absolute -inset-3 bg-blue-100 rounded-full opacity-70"></div>
-                    <GiWaterDrop className="relative text-2xl text-blue-500 p-2" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-800">Inundación</h4>
-                    <p className="text-gray-600 text-sm">Hasta Q300,000</p>
-                    <div className="mt-1 text-xs font-medium text-blue-500 bg-blue-50 px-2 py-1 rounded-full inline-block">
-                      + Filtraciones cubiertas
-                    </div>
-                  </div>
+                
+                <div>
+                  <p className="text-xs text-slate-500 uppercase font-medium">Ocupación</p>
+                  <p className="font-medium">Diseñadora Gráfica</p>
                 </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="relative">
-                    <div className="absolute -inset-3 bg-purple-100 rounded-full opacity-70"></div>
-                    <GiHouseKeys className="relative text-2xl text-purple-500 p-2" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-800">Robo</h4>
-                    <p className="text-gray-600 text-sm">Contenido + estructura</p>
-                    <div className="mt-1 text-xs font-medium text-purple-500 bg-purple-50 px-2 py-1 rounded-full inline-block">
-                      + Reposición de llaves
-                    </div>
-                  </div>
+                
+                <div>
+                  <p className="text-xs text-slate-500 uppercase font-medium">Nacimiento</p>
+                  <p className="font-medium">14/09/1988</p>
                 </div>
-              </div>
-            </div>
-
-            {/* Precio con diseño de etiqueta */}
-            <div>
-              <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-6 text-white shadow-lg">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="font-bold text-lg">Plan Estelar</h3>
-                </div>
-
-                <div className="mb-6">
-                  <div className="text-4xl font-bold mb-1">Q2,900<span className="text-lg font-normal opacity-80">/año</span></div>
-                  <div className="text-sm opacity-90">+ IVA incluido</div>
-                </div>
-
-                <div className="space-y-3 text-sm">
-                  <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center">
-                      <IoMdFlash className="text-yellow-300 text-xs" />
-                    </div>
-                    <span>Deducible: 5% (mín Q1,500)</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center">
-                      <FaShieldAlt className="text-blue-200 text-xs" />
-                    </div>
-                    <span>Asistencia legal incluida</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center">
-                      <FaTools className="text-white text-xs" />
-                    </div>
-                    <span>6 servicios de emergencia anuales</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Nota importante con efecto */}
-              <div className="mt-6 bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg animate-pulse">
-                <div className="flex items-start gap-2">
-                  <div className="text-yellow-500 mt-0.5">
-                    <FaShieldAlt />
-                  </div>
-                  <div className="text-sm text-yellow-800">
-                    <strong>Importante:</strong> Cobertura activa inmediatamente al aprobarse tu pago
-                  </div>
+                
+                <div>
+                  <p className="text-xs text-slate-500 uppercase font-medium">Tipo de Cliente</p>
+                  <p className="font-medium">Residencial Premium</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Pie de tarjeta con efecto de luz */}
-        <div className="bg-gradient-to-r from-blue-700 to-blue-800 p-4 text-center text-white/80 text-sm">
-          <div className="inline-flex items-center gap-2">
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-            <span>Cobertura disponible en todo el territorio nacional</span>
+          {/* Columna derecha - Información del seguro */}
+          <div className="space-y-6">
+            {/* Tarjeta de propiedad con diseño de ficha técnica */}
+            <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-slate-100">
+              <div className="border-b border-slate-100 p-6">
+                <h2 className="text-xl font-bold text-slate-800 flex items-center gap-3">
+                  <GiHouse className="text-2xl text-amber-500" />
+                  <span>Vivienda Asegurada</span>
+                </h2>
+              </div>
+              
+              <div className="p-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-1">
+                    <p className="text-xs text-slate-500 uppercase font-medium">Dirección</p>
+                    <p className="font-medium">8a. Calle 15-63, Zona 10</p>
+                    <p className="font-medium">Ciudad de Guatemala</p>
+                  </div>
+                  
+                  <div className="space-y-1">
+                    <p className="text-xs text-slate-500 uppercase font-medium">Tipo de Propiedad</p>
+                    <p className="font-medium">Apartamento</p>
+                  </div>
+                  
+                  <div className="space-y-1">
+                    <p className="text-xs text-slate-500 uppercase font-medium">Área Construida</p>
+                    <p className="font-medium">95 m²</p>
+                  </div>
+                  
+                  <div className="space-y-1">
+                    <p className="text-xs text-slate-500 uppercase font-medium">Año Construcción</p>
+                    <p className="font-medium">2018</p>
+                  </div>
+                  
+                  <div className="space-y-1">
+                    <p className="text-xs text-slate-500 uppercase font-medium">Valor Asegurado</p>
+                    <p className="font-medium text-lg text-slate-800">Q1,750,000</p>
+                  </div>
+                  
+                  <div className="space-y-1">
+                    <p className="text-xs text-slate-500 uppercase font-medium">Uso</p>
+                    <p className="font-medium">Habitación permanente</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Tarjeta de póliza con diseño de documento */}
+            <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-slate-100">
+              <div className="border-b border-slate-100 p-6 bg-slate-50">
+                <h2 className="text-xl font-bold text-slate-800 flex items-center gap-3">
+                  <FaFileAlt className="text-slate-600" />
+                  <span>Póliza de Seguro</span>
+                </h2>
+              </div>
+              
+              <div className="p-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                  <div className="bg-slate-50 p-4 rounded-lg">
+                    <p className="text-xs text-slate-500 uppercase font-medium">Número</p>
+                    <p className="font-medium">HOG-2023-789012</p>
+                  </div>
+                  
+                  <div className="bg-slate-50 p-4 rounded-lg">
+                    <p className="text-xs text-slate-500 uppercase font-medium">Estado</p>
+                    <p className="font-medium text-green-600">Vigente</p>
+                  </div>
+                  
+                  <div className="bg-slate-50 p-4 rounded-lg">
+                    <p className="text-xs text-slate-500 uppercase font-medium">Vigencia</p>
+                    <p className="font-medium">01/05/2023 - 01/05/2024</p>
+                  </div>
+                </div>
+                
+                <h3 className="font-bold text-slate-800 mb-4 flex items-center gap-2">
+                  <FaShieldAlt className="text-blue-500" />
+                  <span>Coberturas Principales</span>
+                </h3>
+                
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-lg">
+                    <div className="p-3 bg-red-100 rounded-lg text-red-500">
+                      <FaFire className="text-lg" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-800">Incendio y Rayo</h4>
+                      <p className="text-slate-600 text-sm">Cobertura total del valor asegurado</p>
+                      <p className="text-xs text-slate-500 mt-1">Deducible: 5% (mínimo Q1,500)</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-lg">
+                    <div className="p-3 bg-blue-100 rounded-lg text-blue-500">
+                      <GiWaterFlask className="text-lg" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-800">Daños por Agua</h4>
+                      <p className="text-slate-600 text-sm">Hasta Q250,000 por inundación</p>
+                      <p className="text-xs text-slate-500 mt-1">Incluye filtraciones</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-lg">
+                    <div className="p-3 bg-purple-100 rounded-lg text-purple-500">
+                      <GiPadlock className="text-lg" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-800">Robo</h4>
+                      <p className="text-slate-600 text-sm">Hasta Q100,000 para contenido</p>
+                      <p className="text-xs text-slate-500 mt-1">Incluye daños por vandalismo</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <h3 className="font-bold text-slate-800 mt-8 mb-4 flex items-center gap-2">
+                  <FaMoneyBillWave className="text-green-500" />
+                  <span>Detalles de Pago</span>
+                </h3>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="bg-green-50 p-4 rounded-lg border border-green-100">
+                    <p className="text-xs text-green-800 uppercase font-medium">Prima Anual</p>
+                    <p className="text-xl font-bold text-slate-800">Q2,450</p>
+                  </div>
+                  
+                  <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                    <p className="text-xs text-blue-800 uppercase font-medium">Próximo Pago</p>
+                    <p className="font-medium">01/05/2024</p>
+                  </div>
+                  
+                  <div className="bg-amber-50 p-4 rounded-lg border border-amber-100">
+                    <p className="text-xs text-amber-800 uppercase font-medium">Método</p>
+                    <p className="font-medium">Transferencia Bancaria</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
