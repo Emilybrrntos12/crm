@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FiHome, FiUser, FiMail, FiPhone, FiCreditCard, FiEdit } from 'react-icons/fi';
+import { FiHome, FiUser, FiMail, FiPhone, FiCreditCard, FiEdit, FiCalendar, FiMapPin } from 'react-icons/fi';
 import { FaCar, FaCarCrash, FaTools, FaShieldAlt, FaUserShield, FaFileContract, FaMoneyBillWave } from 'react-icons/fa';
 
 export default function ClientAutoInsuranceProfile() {
@@ -48,67 +48,75 @@ export default function ClientAutoInsuranceProfile() {
                   <div className="flex items-start">
                     <FiCreditCard className="text-gray-500 mt-1 mr-3 flex-shrink-0" />
                     <div>
-                      <p className="text-sm text-gray-500">Número de cliente</p>
-                      <p className="font-medium text-gray-400">AUT-789456</p>
+                      <p className="text-sm text-gray-700">Número de cliente</p>
+                      <p className="font-medium text-gray-600">AUT-789456</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
                     <FiMail className="text-gray-500 mt-1 mr-3 flex-shrink-0" />
                     <div>
-                      <p className="text-sm text-gray-500">Correo electrónico</p>
-                      <p className="font-medium text-gray-400">maria.garcia@example.com</p>
+                      <p className="text-sm text-gray-700">Correo electrónico</p>
+                      <p className="font-medium text-gray-500">maria.garcia@example.com</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
                     <FiPhone className="text-gray-500 mt-1 mr-3 flex-shrink-0" />
                     <div>
-                      <p className="text-sm text-gray-500">Teléfonos</p>
-                      <p className="font-medium text-gray-400">+502 1234 5678</p>
-                      <p className="font-medium text-gray-400">+502 8765 4321</p>
+                      <p className="text-sm text-gray-700">Teléfonos</p>
+                      <p className="font-medium text-gray-600">+502 1234 5678</p>
+                      <p className="font-medium text-gray-600">+502 8765 4321</p>
                     </div>
+                    </div>
+
+                  <div className="flex items-start">
+                    <FiMapPin className="text-gray-600 mt-1 mr-3 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm text-gray-700 font-medium">Dirección</p>
+                      <p className="text-gray-600">12 Calle 3-45, Zona 10, Ciudad de Guatemala</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <FiCreditCard className="text-gray-600 mt-1 mr-3 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm text-gray-700 font-medium">DPI</p>
+                      <p className="text-gray-600">1234 56789 0101</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <FiCalendar className="text-gray-600 mt-1 mr-3 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm text-gray-700 font-medium">Fecha de nacimiento</p>
+                      <p className="text-gray-600">15 de marzo de 1985</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <FiUser className="text-gray-500 mt-1 mr-3 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm text-gray-700 font-medium">Estado civil</p>
+                      <p className="text-gray-600">Casado</p>
+                    </div>
+                    </div>
+
+                    <div className="flex items-start">
+                    <FiUser className="text-gray-600 mt-1 mr-3 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm text-gray-700 font-medium">Estado del cliente</p>
+                      <select className="block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-800">
+                        <option value="activo">Activo</option>
+                        <option value="inactivo">Inactivo</option>
+                      </select>
+                    </div>
+                
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Tarjeta de información adicional */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="bg-gray-800 p-4 text-white font-medium flex items-center">
-                <FiUser className="mr-2" /> Datos Adicionales
-              </div>
-              
-              <div className="p-6">
-                <div className="space-y-4">
-                  <div>
-                    <p className="text-sm text-gray-500">Fecha de nacimiento</p>
-                    <p className="font-medium text-gray-400">15/03/1985</p>
-                  </div>
-                  
-                  <div>
-                    <p className="text-sm text-gray-500">DPI</p>
-                    <p className="font-medium text-gray-400">1234 56789 0101</p>
-                  </div>
-                  
-                  <div>
-                    <p className="text-sm text-gray-500">Estado civil</p>
-                    <p className="font-medium text-gray-400">Casada</p>
-                  </div>
-                  
-                  <div>
-                    <p className="text-sm text-gray-500">Dirección</p>
-                    <p className="font-medium text-gray-400">12 Calle 3-45, Zona 10</p>
-                    <p className="font-medium text-gray-400">Ciudad de Guatemala</p>
-                  </div>
-                  
-                  <div>
-                    <p className="text-sm text-gray-500">Ocupación</p>
-                    <p className="font-medium text-gray-400">Ingeniera Industrial</p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Columna derecha - Información del seguro */}
@@ -125,32 +133,32 @@ export default function ClientAutoInsuranceProfile() {
               <div className="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
                   <p className="text-sm text-gray-500">Marca/Modelo</p>
-                  <p className="font-medium text-lg text-gray-400">Toyota RAV4 2021</p>
+                  <p className="font-medium text-lg text-gray-600">Toyota RAV4 2021</p>
                 </div>
                 
                 <div>
                   <p className="text-sm text-gray-500">Placas</p>
-                  <p className="font-medium text-lg text-gray-400">P 789ABC</p>
+                  <p className="font-medium text-lg text-gray-600">P 789ABC</p>
                 </div>
                 
                 <div>
                   <p className="text-sm text-gray-500">Color</p>
-                  <p className="font-medium text-lg text-gray-400">Rojo</p>
+                  <p className="font-medium text-lg text-gray-600">Rojo</p>
                 </div>
                 
                 <div>
                   <p className="text-sm text-gray-500">VIN</p>
-                  <p className="font-medium text-gray-400">JTMBFREV80D123456</p>
+                  <p className="font-medium text-gray-600">JTMBFREV80D123456</p>
                 </div>
                 
                 <div>
                   <p className="text-sm text-gray-500">Uso</p>
-                  <p className="font-medium text-gray-400">Particular</p>
+                  <p className="font-medium text-gray-600">Particular</p>
                 </div>
                 
                 <div>
                   <p className="text-sm text-gray-500">Kilometraje</p>
-                  <p className="font-medium text-gray-400">35,000 km</p>
+                  <p className="font-medium text-gray-600">35,000 km</p>
                 </div>
               </div>
             </div>
@@ -168,7 +176,7 @@ export default function ClientAutoInsuranceProfile() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                   <div className="bg-emerald-50 p-4 rounded-lg border border-emerald-100">
                     <p className="text-sm text-emerald-800 font-medium">Número de póliza</p>
-                    <p className="text-xl font-bold text-gray-400">AUT-2023-789456</p>
+                    <p className="text-xl font-bold text-black">AUT-2023-789456</p>
                   </div>
                   
                   <div className="bg-emerald-50 p-4 rounded-lg border border-emerald-100">
@@ -178,12 +186,12 @@ export default function ClientAutoInsuranceProfile() {
                   
                   <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
                     <p className="text-sm text-blue-800 font-medium">Vigencia</p>
-                    <p className="text-lg font-medium text-gray-400">15/01/2023 - 15/01/2024</p>
+                    <p className="text-lg font-medium text-gray-600">15/01/2023 - 15/01/2024</p>
                   </div>
                   
                   <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
                     <p className="text-sm text-blue-800 font-medium">Forma de pago</p>
-                    <p className="text-lg font-medium text-gray-400">Débito automático</p>
+                    <p className="text-lg font-medium text-gray-600">Débito automático</p>
                   </div>
                 </div>
                 
@@ -199,7 +207,7 @@ export default function ClientAutoInsuranceProfile() {
                     <div>
                       <strong className="block text-gray-800">Daños Materiales</strong>
                       <p className="text-gray-600">Valor comercial completo (Q150,000)</p>
-                      <p className="text-sm text-gray-500 mt-1">Deducible: 5% (mínimo Q2,500)</p>
+                      <p className="text-sm text-gray-600 mt-1">Deducible: 5% (mínimo Q2,500)</p>
                     </div>
                   </div>
                   
@@ -216,7 +224,7 @@ export default function ClientAutoInsuranceProfile() {
                     <div>
                       <strong className="block text-gray-800">Asistencia Vial</strong>
                       <p className="text-gray-600">Servicios ilimitados 24/7</p>
-                      <p className="text-sm text-gray-500 mt-1">Incluye grúa, paso de corriente, cerrajería</p>
+                      <p className="text-sm text-gray-600 mt-1">Incluye grúa, paso de corriente, cerrajería</p>
                     </div>
                   </div>
                 </div>
@@ -230,18 +238,18 @@ export default function ClientAutoInsuranceProfile() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="bg-emerald-50 p-4 rounded-lg border border-emerald-100">
                     <p className="text-sm text-emerald-800 font-medium">Prima mensual</p>
-                    <p className="text-2xl font-bold text-gray-400">Q850.00</p>
+                    <p className="text-2xl font-bold text-black">Q850.00</p>
                     <p className="text-sm text-gray-600">+ IVA</p>
                   </div>
                   
                   <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
                     <p className="text-sm text-blue-800 font-medium">Próximo pago</p>
-                    <p className="text-xl font-medium text-gray-400">15/11/2023</p>
+                    <p className="text-xl font-medium text-gray-600">15/11/2023</p>
                   </div>
                   
                   <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
                     <p className="text-sm text-blue-800 font-medium">Método de pago</p>
-                    <p className="text-xl font-medium text-gray-400">Tarjeta **** 4567</p>
+                    <p className="text-xl font-medium text-gray-600">Mensual</p>
                   </div>
                 </div>
               </div>

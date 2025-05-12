@@ -57,8 +57,8 @@ export default function ClientHomeInsuranceProfile() {
                       <FaEnvelope />
                     </div>
                     <div>
-                      <p className="text-xs text-slate-500 uppercase font-medium">Correo</p>
-                      <p className="font-medium">ana.ramirez@example.com</p>
+                      <p className="text-xs text-slate-700 uppercase font-medium">Correo</p>
+                      <p className="font-medium text-slate-500">ana.ramirez@example.com</p>
                     </div>
                   </div>
                   
@@ -67,9 +67,9 @@ export default function ClientHomeInsuranceProfile() {
                       <FaPhone />
                     </div>
                     <div>
-                      <p className="text-xs text-slate-500 uppercase font-medium">Teléfonos</p>
-                      <p className="font-medium">+502 7890 1234</p>
-                      <p className="font-medium">+502 7890 5678</p>
+                      <p className="text-xs text-slate-700 uppercase font-medium">Teléfonos</p>
+                      <p className="font-medium text-slate-500">+502 7890 1234</p>
+                      <p className="font-medium text-slate-500">+502 7890 5678</p>
                     </div>
                   </div>
                   
@@ -78,9 +78,9 @@ export default function ClientHomeInsuranceProfile() {
                       <FaMapMarkerAlt />
                     </div>
                     <div>
-                      <p className="text-xs text-slate-500 uppercase font-medium">Dirección</p>
-                      <p className="font-medium">8a. Calle 15-63, Zona 10</p>
-                      <p className="font-medium">Ciudad de Guatemala</p>
+                      <p className="text-xs text-slate-700 uppercase font-medium">Dirección</p>
+                      <p className="font-medium text-slate-500">8a. Calle 15-63, Zona 10</p>
+                      <p className="font-medium text-slate-500">Ciudad de Guatemala</p>
                     </div>
                   </div>
                 </div>
@@ -96,18 +96,18 @@ export default function ClientHomeInsuranceProfile() {
               
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <p className="text-xs text-slate-500 uppercase font-medium">Estado Civil</p>
-                  <p className="font-medium">Soltera</p>
+                  <p className="text-xs text-slate-700 uppercase font-medium">Estado Civil</p>
+                  <p className="font-medium text-slate-500">Soltera</p>
                 </div>
                 
                 <div>
-                  <p className="text-xs text-slate-500 uppercase font-medium">Ocupación</p>
-                  <p className="font-medium">Diseñadora Gráfica</p>
+                  <p className="text-xs text-slate-700 uppercase font-medium">Ocupación</p>
+                  <p className="font-medium text-slate-500">Diseñadora Gráfica</p>
                 </div>
                 
                 <div>
-                  <p className="text-xs text-slate-500 uppercase font-medium">Nacimiento</p>
-                  <p className="font-medium">14/09/1988</p>
+                  <p className="text-xs text-slate-700 uppercase font-medium">Nacimiento</p>
+                  <p className="font-medium text-slate-500">14/09/1988</p>
                 </div>
                 
                 <div>
@@ -249,8 +249,8 @@ export default function ClientHomeInsuranceProfile() {
                   </div>
                   
                   <div className="bg-amber-50 p-4 rounded-lg border border-amber-100">
-                    <p className="text-xs text-amber-800 uppercase font-medium">Método</p>
-                    <p className="font-medium">Transferencia Bancaria</p>
+                    <p className="text-xs text-amber-800 uppercase font-medium">Método de Pago</p>
+                    <p className="font-medium">Anual</p>
                   </div>
                 </div>
               </div>

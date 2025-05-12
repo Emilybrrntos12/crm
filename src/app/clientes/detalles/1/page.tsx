@@ -101,6 +101,17 @@ export default function ClientProfilePage() {
                       <p className="text-gray-600">Casado</p>
                     </div>
                   </div>
+
+                  <div className="flex items-start">
+                    <FiUser className="text-gray-600 mt-1 mr-3 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm text-gray-700 font-medium">Estado del cliente</p>
+                      <select className="block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-800">
+                        <option value="activo">Activo</option>
+                        <option value="inactivo">Inactivo</option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -194,8 +205,8 @@ export default function ClientProfilePage() {
                   </div>
 
                   <div className="bg-blue-50 p-4 rounded-lg">
-                    <p className="text-sm text-blue-800 font-medium">Forma de pago</p>
-                    <p className="text-xl font-medium text-black">Débito automático</p>
+                    <p className="text-sm text-blue-800 font-medium">Método de pago</p>
+                    <p className="text-xl font-medium text-black">Trimestral</p>
                   </div>
 
                   <div className="bg-blue-50 p-4 rounded-lg">
