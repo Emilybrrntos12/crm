@@ -15,9 +15,11 @@ export default function PolizasPage() {
           <button className="p-2 rounded-lg bg-white border border-gray-200 shadow-sm hover:bg-gray-50 text-gray-600">
             <FaDownload className="h-5 w-5" />
           </button>
-          <button className="p-2 rounded-lg bg-white border border-gray-200 shadow-sm hover:bg-gray-50 text-gray-600">
-            <FaEllipsisV className="h-5 w-5" />
-          </button>
+          <Link href="/polizas/documentos">
+            <button className="p-2 rounded-lg hover:bg-gray-100 text-gray-600">
+              <FaEllipsisV className="h-4 w-4" />
+            </button>
+          </Link>
         </div>
       </div>
 
@@ -199,15 +201,21 @@ export default function PolizasPage() {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                   <div className="flex justify-end items-center gap-2">
-                    <button className="p-2 rounded-lg hover:bg-blue-50 text-blue-600">
-                      <FaSearch className="h-4 w-4" />
-                    </button>
-                    <button className="p-2 rounded-lg hover:bg-gray-100 text-gray-600">
-                      <FaFileInvoiceDollar className="h-4 w-4" />
-                    </button>
-                    <button className="p-2 rounded-lg hover:bg-gray-100 text-gray-600">
-                      <FaEllipsisV className="h-4 w-4" />
-                    </button>
+                    <Link href="/polizas/detalles">
+                      <button className="p-2 rounded-lg hover:bg-blue-50 text-blue-600">
+                        <FaSearch className="h-4 w-4" />
+                      </button>
+                    </Link>                    
+                    <Link href="/polizas/estado-financiero">
+                      <button className="p-2 rounded-lg hover:bg-gray-100 text-gray-600">
+                        <FaFileInvoiceDollar className="h-4 w-4" />
+                      </button>
+                    </Link>
+                    <Link href="/polizas/documentos">
+                      <button className="p-2 rounded-lg hover:bg-gray-100 text-gray-600">
+                        <FaEllipsisV className="h-4 w-4" />
+                      </button>
+                    </Link>
                   </div>
                 </td>
               </tr>
@@ -248,15 +256,21 @@ export default function PolizasPage() {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                   <div className="flex justify-end items-center gap-2">
-                    <button className="p-2 rounded-lg hover:bg-blue-50 text-blue-600">
-                      <FaSearch className="h-4 w-4" />
-                    </button>
-                    <button className="p-2 rounded-lg hover:bg-green-50 text-green-600">
-                      <FaFileSignature className="h-4 w-4" />
-                    </button>
-                    <button className="p-2 rounded-lg hover:bg-gray-100 text-gray-600">
-                      <FaEllipsisV className="h-4 w-4" />
-                    </button>
+                    <Link href="/polizas/detalles">
+                      <button className="p-2 rounded-lg hover:bg-blue-50 text-blue-600">
+                        <FaSearch className="h-4 w-4" />
+                      </button>
+                    </Link>
+                    <Link href="/polizas/facturacion">
+                      <button className="p-2 rounded-lg hover:bg-green-50 text-green-600">
+                        <FaFileInvoiceDollar className="h-4 w-4" />
+                      </button>
+                    </Link>
+                    <Link href="/polizas/documentos">
+                      <button className="p-2 rounded-lg hover:bg-gray-100 text-gray-600">
+                        <FaEllipsisV className="h-4 w-4" />
+                      </button>
+                    </Link>
                   </div>
                 </td>
               </tr>
@@ -298,15 +312,21 @@ export default function PolizasPage() {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                   <div className="flex justify-end items-center gap-2">
-                    <button className="p-2 rounded-lg hover:bg-blue-50 text-blue-600">
-                      <FaSearch className="h-4 w-4" />
-                    </button>
-                    <button className="p-2 rounded-lg hover:bg-green-50 text-green-600">
-                      <FaFileInvoiceDollar className="h-4 w-4" />
-                    </button>
-                    <button className="p-2 rounded-lg hover:bg-gray-100 text-gray-600">
-                      <FaEllipsisV className="h-4 w-4" />
-                    </button>
+                    <Link href="/polizas/detalles">
+                      <button className="p-2 rounded-lg hover:bg-blue-50 text-blue-600">
+                        <FaSearch className="h-4 w-4" />
+                      </button>
+                    </Link>
+                    <Link href="/polizas/facturacion">
+                      <button className="p-2 rounded-lg hover:bg-green-50 text-green-600">
+                        <FaFileInvoiceDollar className="h-4 w-4" />
+                      </button>
+                    </Link>
+                    <Link href="/polizas/documentos">
+                      <button className="p-2 rounded-lg hover:bg-gray-100 text-gray-600">
+                        <FaEllipsisV className="h-4 w-4" />
+                      </button>
+                    </Link>
                   </div>
                 </td>
               </tr>
@@ -348,15 +368,21 @@ export default function PolizasPage() {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                   <div className="flex justify-end items-center gap-2">
-                    <button className="p-2 rounded-lg hover:bg-blue-50 text-blue-600">
-                      <FaSearch className="h-4 w-4" />
-                    </button>
-                    <button className="p-2 rounded-lg hover:bg-green-50 text-green-600">
-                      <FaFileSignature className="h-4 w-4" />
-                    </button>
-                    <button className="p-2 rounded-lg hover:bg-gray-100 text-gray-600">
-                      <FaEllipsisV className="h-4 w-4" />
-                    </button>
+                    <Link href="/polizas/detalles">
+                      <button className="p-2 rounded-lg hover:bg-blue-50 text-blue-600">
+                        <FaSearch className="h-4 w-4" />
+                      </button>
+                    </Link>
+                    <Link href="/polizas/facturacion">
+                      <button className="p-2 rounded-lg hover:bg-green-50 text-green-600">
+                        <FaFileInvoiceDollar className="h-4 w-4" />
+                      </button>
+                    </Link>
+                    <Link href="/polizas/documentos">
+                      <button className="p-2 rounded-lg hover:bg-gray-100 text-gray-600">
+                        <FaEllipsisV className="h-4 w-4" />
+                      </button>
+                    </Link>
                   </div>
                 </td>
               </tr>
@@ -398,15 +424,19 @@ export default function PolizasPage() {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                   <div className="flex justify-end items-center gap-2">
-                    <button className="p-2 rounded-lg hover:bg-blue-50 text-blue-600">
-                      <FaSearch className="h-4 w-4" />
-                    </button>
+                    <Link href="/polizas/detalles">
+                      <button className="p-2 rounded-lg hover:bg-blue-50 text-blue-600">
+                        <FaSearch className="h-4 w-4" />
+                      </button>
+                    </Link>
                     <button className="p-2 rounded-lg hover:bg-red-50 text-red-600">
                       <FaExclamationTriangle className="h-4 w-4" />
                     </button>
-                    <button className="p-2 rounded-lg hover:bg-gray-100 text-gray-600">
-                      <FaEllipsisV className="h-4 w-4" />
-                    </button>
+                    <Link href="/polizas/documentos">
+                      <button className="p-2 rounded-lg hover:bg-gray-100 text-gray-600">
+                        <FaEllipsisV className="h-4 w-4" />
+                      </button>
+                    </Link>
                   </div>
                 </td>
               </tr>

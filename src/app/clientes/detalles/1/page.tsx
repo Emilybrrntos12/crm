@@ -142,13 +142,13 @@ export default function ClientProfilePage() {
                   </div>
 
                   <div className="bg-blue-50 p-4 rounded-lg">
-                    <h3 className="font-semibold text-blue-800 mb-2">Fecha de inicio</h3>
-                    <p className="text-xl text-gray-600">15/01/2023</p>
+                    <h3 className="font-semibold text-blue-800 mb-2">Vigencia</h3>
+                    <p className="text-xl text-gray-600">15/01/2023 - 15/01/2028</p>
                   </div>
 
                   <div className="bg-blue-50 p-4 rounded-lg">
-                    <h3 className="font-semibold text-blue-800 mb-2">Fecha de vencimiento</h3>
-                    <p className="text-xl text-gray-600">15/01/2028</p>
+                    <h3 className="font-semibold text-blue-800 mb-2">Formato de Pago </h3>
+                    <p className="text-xl text-gray-600">Trimestral</p>
                   </div>
                 </div>
 
@@ -205,8 +205,8 @@ export default function ClientProfilePage() {
                   </div>
 
                   <div className="bg-blue-50 p-4 rounded-lg">
-                    <p className="text-sm text-blue-800 font-medium">Método de pago</p>
-                    <p className="text-xl font-medium text-black">Trimestral</p>
+                    <p className="text-sm text-blue-800 font-medium">Deducible aplicable</p>
+                    <p className="text-2xl font-bold text-black">Q1,500</p>
                   </div>
 
                   <div className="bg-blue-50 p-4 rounded-lg">

@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { FiHome, FiUser, FiMail, FiPhone, FiCreditCard, FiEdit, FiCalendar, FiMapPin } from 'react-icons/fi';
-import { FaCar, FaCarCrash, FaTools, FaShieldAlt, FaUserShield, FaFileContract, FaMoneyBillWave } from 'react-icons/fa';
+import { FiHome, FiUser, FiMail, FiPhone, FiCreditCard, FiEdit, FiCalendar, FiMapPin, } from 'react-icons/fi';
+import { FaCar, FaCarCrash, FaTools, FaShieldAlt, FaUserShield, FaFileContract, FaMoneyBillWave, FaExclamationTriangle } from 'react-icons/fa';
 
 export default function ClientAutoInsuranceProfile() {
   return (
@@ -184,16 +184,24 @@ export default function ClientAutoInsuranceProfile() {
                     <p className="text-xl font-bold text-emerald-600">Activa</p>
                   </div>
                   
-                  <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
-                    <p className="text-sm text-blue-800 font-medium">Vigencia</p>
-                    <p className="text-lg font-medium text-gray-600">15/01/2023 - 15/01/2024</p>
+                <div className="bg-blue-50 p-4 rounded-lg border border-blue-100 mt-6">
+                  <div className="flex items-center">
+                    <h4 className="font-semibold text-gray-800">Vigencia</h4>
                   </div>
-                  
-                  <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
-                    <p className="text-sm text-blue-800 font-medium">Forma de pago</p>
-                    <p className="text-lg font-medium text-gray-600">Débito automático</p>
-                  </div>
+                  <p className="text-gray-600 mt-2">15/01/2023 - 15/01/2024</p>
                 </div>
+                  
+                
+                <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200 mt-6">
+                  <div className="flex items-center">
+                    <FaExclamationTriangle className="text-yellow-500 mr-2" />
+                    <h4 className="font-semibold text-gray-800">Deducible General</h4>
+                  </div>
+                  <p className="text-gray-600 mt-2">Aplica 5% del valor del daño (mínimo Q2,500) en todos los siniestros</p>
+                </div>
+                </div>
+                
+                {/* Información adicional */}
                 
                 {/* Coberturas */}
                 <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
@@ -248,7 +256,7 @@ export default function ClientAutoInsuranceProfile() {
                   </div>
                   
                   <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
-                    <p className="text-sm text-blue-800 font-medium">Método de pago</p>
+                    <p className="text-sm text-blue-800 font-medium">Formato de pago</p>
                     <p className="text-xl font-medium text-gray-600">Mensual</p>
                   </div>
                 </div>

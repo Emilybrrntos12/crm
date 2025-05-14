@@ -5,29 +5,28 @@ import { FiHome, FiEdit2 } from 'react-icons/fi';
 
 export default function ClientHomeInsuranceProfile() {
   return (
-    <div className="min-h-screen bg-slate-50 p-4 md:p-6">
-      {/* Barra superior minimalista */}
-      <div className="flex justify-between items-center mb-8">
-        <Link href="/">
-          <button className="p-2 rounded-full bg-white shadow-sm hover:bg-slate-100 transition duration-200 text-slate-600">
-            <FiHome className="h-5 w-5" />
+    <div className="min-h-screen bg-slate-50 p-0">
+      {/* Barra superior */}
+      <div className="bg-white shadow-sm p-4 md:px-6">
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
+          <Link href="/">
+            <button className="p-2 rounded-full bg-slate-100 hover:bg-slate-200 transition duration-200 text-slate-600">
+              <FiHome className="h-5 w-5" />
+            </button>
+          </Link>
+          <button className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-slate-800">
+            <FiEdit2 /> Editar perfil
           </button>
-        </Link>
-        <button className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-slate-800">
-          <FiEdit2 /> Editar perfil
-        </button>
+        </div>
       </div>
 
-      {/* Contenedor principal con layout asimétrico */}
-      <div className="max-w-6xl mx-auto">
-        {/* Encabezado con tipografía moderna */}
-
-        {/* Grid con proporción 40/60 */}
-        <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-8">
+      {/* Contenedor principal */}
+      <div className="w-full max-w-none mx-0">
+        <div className="grid grid-cols-1 xl:grid-cols-[minmax(300px,400px)_1fr] gap-6 px-4 md:px-6 py-6">
           {/* Columna izquierda - Perfil del cliente */}
           <div className="space-y-6">
-            {/* Tarjeta de perfil con diseño de tarjeta de presentación */}
-            <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-slate-100">
+            {/* Tarjeta de perfil */}
+            <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-slate-100 w-full">
               <div className="bg-gradient-to-r from-slate-800 to-slate-700 p-6">
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-inner">
@@ -57,7 +56,7 @@ export default function ClientHomeInsuranceProfile() {
                       <FaEnvelope />
                     </div>
                     <div>
-                      <p className="text-xs text-slate-700 uppercase font-medium">Correo</p>
+                      <p className="text-xs text-slate-800 uppercase font-medium">Correo</p>
                       <p className="font-medium text-slate-500">ana.ramirez@example.com</p>
                     </div>
                   </div>
@@ -67,7 +66,7 @@ export default function ClientHomeInsuranceProfile() {
                       <FaPhone />
                     </div>
                     <div>
-                      <p className="text-xs text-slate-700 uppercase font-medium">Teléfonos</p>
+                      <p className="text-xs text-slate-800 uppercase font-medium">Teléfonos</p>
                       <p className="font-medium text-slate-500">+502 7890 1234</p>
                       <p className="font-medium text-slate-500">+502 7890 5678</p>
                     </div>
@@ -78,7 +77,7 @@ export default function ClientHomeInsuranceProfile() {
                       <FaMapMarkerAlt />
                     </div>
                     <div>
-                      <p className="text-xs text-slate-700 uppercase font-medium">Dirección</p>
+                      <p className="text-xs text-slate-800 uppercase font-medium">Dirección</p>
                       <p className="font-medium text-slate-500">8a. Calle 15-63, Zona 10</p>
                       <p className="font-medium text-slate-500">Ciudad de Guatemala</p>
                     </div>
@@ -88,7 +87,7 @@ export default function ClientHomeInsuranceProfile() {
             </div>
 
             {/* Tarjeta de información adicional */}
-            <div className="bg-white rounded-2xl shadow-md p-6 border border-slate-100">
+            <div className="bg-white rounded-2xl shadow-md p-6 border border-slate-100 w-full">
               <h3 className="font-bold text-slate-800 mb-4 flex items-center gap-2">
                 <FaFileAlt className="text-slate-600" />
                 <span>Detalles Adicionales</span>
@@ -96,23 +95,23 @@ export default function ClientHomeInsuranceProfile() {
               
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <p className="text-xs text-slate-700 uppercase font-medium">Estado Civil</p>
+                  <p className="text-xs text-slate-800 uppercase font-medium">Estado Civil</p>
                   <p className="font-medium text-slate-500">Soltera</p>
                 </div>
                 
                 <div>
-                  <p className="text-xs text-slate-700 uppercase font-medium">Ocupación</p>
+                  <p className="text-xs text-slate-800 uppercase font-medium">Ocupación</p>
                   <p className="font-medium text-slate-500">Diseñadora Gráfica</p>
                 </div>
                 
                 <div>
-                  <p className="text-xs text-slate-700 uppercase font-medium">Nacimiento</p>
+                  <p className="text-xs text-slate-800 uppercase font-medium">Nacimiento</p>
                   <p className="font-medium text-slate-500">14/09/1988</p>
                 </div>
                 
                 <div>
-                  <p className="text-xs text-slate-500 uppercase font-medium">Tipo de Cliente</p>
-                  <p className="font-medium">Residencial Premium</p>
+                  <p className="text-xs text-slate-800 uppercase font-medium">Tipo de Cliente</p>
+                  <p className="font-medium text-slate-500">Residencial Premium</p>
                 </div>
               </div>
             </div>
@@ -132,24 +131,24 @@ export default function ClientHomeInsuranceProfile() {
               <div className="p-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-1">
-                    <p className="text-xs text-slate-500 uppercase font-medium">Dirección</p>
-                    <p className="font-medium">8a. Calle 15-63, Zona 10</p>
-                    <p className="font-medium">Ciudad de Guatemala</p>
+                    <p className="text-xs text-slate-800 uppercase font-medium">Dirección</p>
+                    <p className="font-medium text-slate-500">8a. Calle 15-63, Zona 10</p>
+                    <p className="font-medium text-slate-500">Ciudad de Guatemala</p>
                   </div>
                   
                   <div className="space-y-1">
-                    <p className="text-xs text-slate-500 uppercase font-medium">Tipo de Propiedad</p>
-                    <p className="font-medium">Apartamento</p>
+                    <p className="text-xs text-slate-800 uppercase font-medium">Tipo de Propiedad</p>
+                    <p className="font-medium text-slate-500">Apartamento</p>
                   </div>
                   
                   <div className="space-y-1">
-                    <p className="text-xs text-slate-500 uppercase font-medium">Área Construida</p>
-                    <p className="font-medium">95 m²</p>
+                    <p className="text-xs text-slate-800 uppercase font-medium">Área Construida</p>
+                    <p className="font-medium text-slate-500">95 m²</p>
                   </div>
                   
                   <div className="space-y-1">
-                    <p className="text-xs text-slate-500 uppercase font-medium">Año Construcción</p>
-                    <p className="font-medium">2018</p>
+                    <p className="text-xs text-slate-800 uppercase font-medium">Año Construcción</p>
+                    <p className="font-medium text-slate-500">2018</p>
                   </div>
                   
                   <div className="space-y-1">
@@ -158,8 +157,8 @@ export default function ClientHomeInsuranceProfile() {
                   </div>
                   
                   <div className="space-y-1">
-                    <p className="text-xs text-slate-500 uppercase font-medium">Uso</p>
-                    <p className="font-medium">Habitación permanente</p>
+                    <p className="text-xs text-slate-800 uppercase font-medium">Uso</p>
+                    <p className="font-medium text-slate-500">Habitación permanente</p>
                   </div>
                 </div>
               </div>
@@ -177,18 +176,18 @@ export default function ClientHomeInsuranceProfile() {
               <div className="p-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                   <div className="bg-slate-50 p-4 rounded-lg">
-                    <p className="text-xs text-slate-500 uppercase font-medium">Número</p>
-                    <p className="font-medium">HOG-2023-789012</p>
+                    <p className="text-xs text-slate-800 uppercase font-medium">Número</p>
+                    <p className="font-medium text-slate-500">HOG-2023-789012</p>
                   </div>
                   
                   <div className="bg-slate-50 p-4 rounded-lg">
-                    <p className="text-xs text-slate-500 uppercase font-medium">Estado</p>
+                    <p className="text-xs text-slate-800 uppercase font-medium">Estado</p>
                     <p className="font-medium text-green-600">Vigente</p>
                   </div>
                   
                   <div className="bg-slate-50 p-4 rounded-lg">
-                    <p className="text-xs text-slate-500 uppercase font-medium">Vigencia</p>
-                    <p className="font-medium">01/05/2023 - 01/05/2024</p>
+                    <p className="text-xs text-slate-800 uppercase font-medium">Vigencia</p>
+                    <p className="font-medium text-slate-500">01/05/2023 - 01/05/2024</p>
                   </div>
                 </div>
                 
@@ -245,12 +244,12 @@ export default function ClientHomeInsuranceProfile() {
                   
                   <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
                     <p className="text-xs text-blue-800 uppercase font-medium">Próximo Pago</p>
-                    <p className="font-medium">01/05/2024</p>
+                    <p className="font-medium text-slate-600">01/05/2024</p>
                   </div>
                   
                   <div className="bg-amber-50 p-4 rounded-lg border border-amber-100">
                     <p className="text-xs text-amber-800 uppercase font-medium">Método de Pago</p>
-                    <p className="font-medium">Anual</p>
+                    <p className="font-medium text-slate-600">Anual</p>
                   </div>
                 </div>
               </div>
