@@ -28,16 +28,13 @@ export default function PolizasPage() {
         <div>
           <h1 className="text-2xl md:text-3xl font-bold text-gray-800">Administración de Pólizas</h1>
           <p className="text-gray-600 mt-1">Gestión integral de pólizas de seguros</p>
-        </div>
-        <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-          <button className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors shadow-sm">
-            <FaFileSignature />
-            <span>Nueva Póliza</span>
-          </button>
-          <button className="flex items-center justify-center gap-2 px-4 py-2.5 border border-gray-300 rounded-lg bg-white text-gray-700 hover:bg-gray-50 transition-colors">
-            <FaFileInvoiceDollar />
-            <span>Renovaciones</span>
-          </button>
+        </div>        <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+          <Link href="/polizas/nueva">
+            <button className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors shadow-sm">
+              <FaFileSignature />
+              <span>Nueva Póliza</span>
+            </button>
+          </Link>
         </div>
       </div>
 
