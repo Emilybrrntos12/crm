@@ -6,8 +6,14 @@ import Link from 'next/link';
 import { FiDownload, FiHome } from 'react-icons/fi';
 import { FaFilePdf, FaFileExcel, FaFileWord } from 'react-icons/fa';
 
-export default function DescargarFacturaPage({ }: { params: { id: string } }) {
-  // Simulamos obtener la factura basada en el ID
+interface PageProps {
+  params: {
+    id: string;
+  };
+}
+
+export default function DescargarFacturaPage() {
+  // El resto de tu código permanece igual...
   const factura = {
     numero: 'FAC-2025-0158',
     fecha: '2025-05-14',
