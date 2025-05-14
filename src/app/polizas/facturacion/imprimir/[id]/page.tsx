@@ -4,7 +4,7 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import { FiPrinter } from 'react-icons/fi';
 
-export default function ImprimirFacturaPage({ params }: { params: { id: string } }) {
+export default function ImprimirFacturaPage({ }: { params: { id: string } }) {
   // Simulamos obtener la factura basada en el ID
   const factura = {
     numero: 'FAC-2025-0158',
