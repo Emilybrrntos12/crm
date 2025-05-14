@@ -249,14 +249,13 @@ export default function PolizasPage() {
                   <div className="text-sm font-medium text-gray-900">$1,200.00</div>
                   <div className="text-xs text-gray-500">Anual</div>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <span className="px-2.5 py-1 inline-flex items-center text-xs font-semibold rounded-full bg-amber-100 text-amber-800">
+                <td className="px-6 py-4 whitespace-nowrap">                  <span className="px-2.5 py-1 inline-flex items-center text-xs font-semibold rounded-full bg-amber-100 text-amber-800">
                     <FaClock className="mr-1.5" /> Pendiente
                   </span>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                   <div className="flex justify-end items-center gap-2">
-                    <Link href="/polizas/detalles">
+                    <Link href="/polizas/detalles/pendiente/234">
                       <button className="p-2 rounded-lg hover:bg-blue-50 text-blue-600">
                         <FaSearch className="h-4 w-4" />
                       </button>
@@ -305,14 +304,13 @@ export default function PolizasPage() {
                   <div className="text-sm font-medium text-gray-900">$620.00</div>
                   <div className="text-xs text-gray-500">Trimestral</div>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <span className="px-2.5 py-1 inline-flex items-center text-xs font-semibold rounded-full bg-red-100 text-red-800">
+                <td className="px-6 py-4 whitespace-nowrap">                  <span className="px-2.5 py-1 inline-flex items-center text-xs font-semibold rounded-full bg-red-100 text-red-800">
                     <FaTimesCircle className="mr-1.5" /> Vencida
                   </span>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                   <div className="flex justify-end items-center gap-2">
-                    <Link href="/polizas/detalles">
+                    <Link href="/polizas/detalles/vencida/345">
                       <button className="p-2 rounded-lg hover:bg-blue-50 text-blue-600">
                         <FaSearch className="h-4 w-4" />
                       </button>
@@ -361,14 +359,13 @@ export default function PolizasPage() {
                   <div className="text-sm font-medium text-gray-900">$1,050.00</div>
                   <div className="text-xs text-gray-500">Mensual</div>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <span className="px-2.5 py-1 inline-flex items-center text-xs font-semibold rounded-full bg-orange-100 text-orange-800">
+                <td className="px-6 py-4 whitespace-nowrap">                  <span className="px-2.5 py-1 inline-flex items-center text-xs font-semibold rounded-full bg-orange-100 text-orange-800">
                     <FaPauseCircle className="mr-1.5" /> Suspendida
                   </span>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                   <div className="flex justify-end items-center gap-2">
-                    <Link href="/polizas/detalles">
+                    <Link href="/polizas/detalles/suspendida/456">
                       <button className="p-2 rounded-lg hover:bg-blue-50 text-blue-600">
                         <FaSearch className="h-4 w-4" />
                       </button>
@@ -422,16 +419,17 @@ export default function PolizasPage() {
                     <FaExclamationTriangle className="mr-1.5" /> Siniestro
                   </span>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                  <div className="flex justify-end items-center gap-2">
-                    <Link href="/polizas/detalles">
+                <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">                  <div className="flex justify-end items-center gap-2">
+                    <Link href="/polizas/detalles/siniestro/567">
                       <button className="p-2 rounded-lg hover:bg-blue-50 text-blue-600">
                         <FaSearch className="h-4 w-4" />
                       </button>
                     </Link>
-                    <button className="p-2 rounded-lg hover:bg-red-50 text-red-600">
-                      <FaExclamationTriangle className="h-4 w-4" />
-                    </button>
+                    <Link href="/polizas/facturacion">
+                      <button className="p-2 rounded-lg hover:bg-green-50 text-green-600">
+                        <FaFileInvoiceDollar className="h-4 w-4" />
+                      </button>
+                    </Link>
                     <Link href="/polizas/documentos">
                       <button className="p-2 rounded-lg hover:bg-gray-100 text-gray-600">
                         <FaEllipsisV className="h-4 w-4" />
