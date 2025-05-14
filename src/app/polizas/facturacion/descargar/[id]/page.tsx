@@ -6,11 +6,6 @@ import Link from 'next/link';
 import { FiDownload, FiHome } from 'react-icons/fi';
 import { FaFilePdf, FaFileExcel, FaFileWord } from 'react-icons/fa';
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
 
 export default function DescargarFacturaPage() {
   // El resto de tu código permanece igual...
