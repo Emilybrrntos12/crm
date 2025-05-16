@@ -554,7 +554,14 @@ type Documento = {
   url?: string | null; // URL de la imagen o documento
 };
 
-export default function DetalleSiniestro({ params }: { params: { id: string } }) {
+interface PageProps {
+  params: {
+    id: string;
+  };
+  searchParams: { [key: string]: string | string[] | undefined };
+}
+
+export default function DetalleSiniestro({ params }: PageProps) {
   const [documentoSeleccionado, setDocumentoSeleccionado] = useState<Documento | null>(null);
   const [modalAbierto, setModalAbierto] = useState(false);
 
