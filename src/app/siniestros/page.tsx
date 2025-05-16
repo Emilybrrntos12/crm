@@ -292,12 +292,13 @@ export default function SiniestrosPage() {
                       <siniestro.icon className="mr-1.5 text-xs" />
                       {siniestro.estado.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
                     </span>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                  </td>                  <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                     <div className="flex justify-end items-center gap-1">
-                      <button className="p-2 rounded-lg hover:bg-blue-50 text-blue-600" title="Ver detalles">
-                        <FaSearch className="h-4 w-4" />
-                      </button>
+                      <Link href={`/siniestros/detalles/${siniestro.id}`}>
+                        <button className="p-2 rounded-lg hover:bg-blue-50 text-blue-600" title="Ver detalles">
+                          <FaSearch className="h-4 w-4" />
+                        </button>
+                      </Link>
                       <button className="p-2 rounded-lg hover:bg-gray-100 text-gray-600" title="Documentos">
                         <FaFileAlt className="h-4 w-4" />
                       </button>
@@ -346,23 +347,25 @@ export default function SiniestrosPage() {
       {/* Versión móvil (opcional) */}
       <div className="md:hidden mt-6 space-y-3">
         {siniestros.slice(0, 3).map((siniestro, index) => (
-          <div key={index} className={`bg-white p-4 rounded-lg shadow-sm border-l-4 ${siniestro.border}`}>
-            <div className="flex justify-between items-start">
-              <div>
-                <p className="font-medium text-blue-600">{siniestro.id}</p>
-                <p className="text-sm text-gray-900 mt-1">{siniestro.cliente}</p>
-                <p className="text-xs text-gray-500 mt-1">{siniestro.tipo}</p>
+          <Link href={`/siniestros/detalles/${siniestro.id}`} key={index} className="block">
+            <div className={`bg-white p-4 rounded-lg shadow-sm border-l-4 ${siniestro.border} hover:bg-gray-50 transition-colors`}>
+              <div className="flex justify-between items-start">
+                <div>
+                  <p className="font-medium text-blue-600">{siniestro.id}</p>
+                  <p className="text-sm text-gray-900 mt-1">{siniestro.cliente}</p>
+                  <p className="text-xs text-gray-500 mt-1">{siniestro.tipo}</p>
+                </div>
+                <span className={`px-2 py-1 text-xs rounded-full ${siniestro.color}`}>
+                  <siniestro.icon className="inline mr-1" size={10} />
+                  {siniestro.estado.split('_')[0]}
+                </span>
               </div>
-              <span className={`px-2 py-1 text-xs rounded-full ${siniestro.color}`}>
-                <siniestro.icon className="inline mr-1" size={10} />
-                {siniestro.estado.split('_')[0]}
-              </span>
+              <div className="flex justify-between items-center mt-3">
+                <span className="text-xs text-gray-500">{siniestro.fecha}</span>
+                <span className="text-sm font-medium">{siniestro.monto}</span>
+              </div>
             </div>
-            <div className="flex justify-between items-center mt-3">
-              <span className="text-xs text-gray-500">{siniestro.fecha}</span>
-              <span className="text-sm font-medium">{siniestro.monto}</span>
-            </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
