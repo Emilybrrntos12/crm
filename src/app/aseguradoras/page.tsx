@@ -1,14 +1,14 @@
 import { 
   FaShieldAlt, 
-  FaCar, 
+  
   FaHome, 
-  FaHeartbeat, 
+  
   FaChartBar,
   FaSearch,
   FaFilter,
   FaPlus,
   FaChevronRight,
-  FaBuilding,
+  
   FaPhone,
   FaGlobe,
   FaStar
