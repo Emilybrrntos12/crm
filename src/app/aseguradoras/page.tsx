@@ -29,66 +29,6 @@ export default function AseguradorasPage() {
       website: 'www.segurosatlas.com',
       color: 'bg-blue-600',
       icon: <FaShieldAlt className="text-blue-600" />
-    },
-    {
-      id: 2,
-      nombre: 'Protección Total',
-      descripcion: 'Especialistas en seguros para empresas y pymes',
-      productos: ['Empresas', 'Responsabilidad Civil', 'Salud'],
-      productosCount: 12,
-      rating: 4.2,
-      telefono: '800 765 4321',
-      website: 'www.protecciontotal.com',
-      color: 'bg-green-600',
-      icon: <FaBuilding className="text-green-600" />
-    },
-    {
-      id: 3,
-      nombre: 'Vida Segura',
-      descripcion: 'Expertos en seguros de vida y gastos médicos mayores',
-      productos: ['Vida', 'Salud', 'Accidentes'],
-      productosCount: 8,
-      rating: 4.7,
-      telefono: '800 987 6543',
-      website: 'www.vidasegura.com',
-      color: 'bg-purple-600',
-      icon: <FaHeartbeat className="text-purple-600" />
-    },
-    {
-      id: 4,
-      nombre: 'Resguardo Hogar',
-      descripcion: 'Protección especializada para tu patrimonio familiar',
-      productos: ['Hogar', 'Electrodomésticos', 'Joyas'],
-      productosCount: 6,
-      rating: 4.3,
-      telefono: '800 456 7890',
-      website: 'www.resguardohogar.com',
-      color: 'bg-orange-600',
-      icon: <FaHome className="text-orange-600" />
-    },
-    {
-      id: 5,
-      nombre: 'AutoPro',
-      descripcion: 'Seguros vehiculares con las mejores coberturas',
-      productos: ['Autos', 'Motos', 'Flotillas'],
-      productosCount: 10,
-      rating: 4.4,
-      telefono: '800 321 6547',
-      website: 'www.autopro.com',
-      color: 'bg-red-600',
-      icon: <FaCar className="text-red-600" />
-    },
-    {
-      id: 6,
-      nombre: 'Global Risk',
-      descripcion: 'Soluciones integrales para riesgos complejos',
-      productos: ['Empresas', 'Viajes', 'Marítimo'],
-      productosCount: 18,
-      rating: 4.1,
-      telefono: '800 159 3578',
-      website: 'www.globalrisk.com',
-      color: 'bg-indigo-600',
-      icon: <FaGlobe className="text-indigo-600" />
     }
   ];
 
