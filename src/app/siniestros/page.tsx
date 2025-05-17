@@ -292,7 +292,8 @@ export default function SiniestrosPage() {
                       <siniestro.icon className="mr-1.5 text-xs" />
                       {siniestro.estado.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
                     </span>
-                  </td>                  <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                     <div className="flex justify-end items-center gap-1">
                       <Link href={`/siniestros/detalles/${siniestro.id}`}>
                         <button className="p-2 rounded-lg hover:bg-blue-50 text-blue-600" title="Ver detalles">

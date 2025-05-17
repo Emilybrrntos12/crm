@@ -2,7 +2,7 @@
 
 import { FaChevronLeft, FaFileAlt, FaHistory, FaUserMd, FaCarCrash, FaMapMarkerAlt, FaPhone, FaEnvelope, FaFileContract, FaFileMedical, FaFileInvoice, FaFileSignature, FaCamera, FaFilePdf, FaFileImage } from 'react-icons/fa';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, use } from 'react';
 
 const siniestrosData = [
   {
@@ -65,7 +65,7 @@ const siniestrosData = [
       { 
         tipo: 'Reporte inicial', 
         estado: 'Completado',
-        url: '/documentos/reporte-inicial-SIN-2023-0042.pdf'
+        url: '/documentos/reporte-inicial-SIN-2023-0042.png'
       },
       { 
         tipo: 'Fotos del siniestro', 
@@ -555,9 +555,9 @@ type Documento = {
 };
 
 interface PageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
@@ -569,13 +569,13 @@ export default function DetalleSiniestro({ params }: PageProps) {
     setDocumentoSeleccionado(documento);
     setModalAbierto(true);
   };
-
   const cerrarModal = () => {
     setDocumentoSeleccionado(null);
     setModalAbierto(false);
   };
-
-  const siniestro = siniestrosData.find((s) => s.id === params.id);
+  
+  const resolvedParams = use(params);
+  const siniestro = siniestrosData.find((s) => s.id === resolvedParams.id);
 
   if (!siniestro) {
     return (
