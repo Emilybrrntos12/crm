@@ -145,8 +145,8 @@ const siniestrosData = [
       deducible: '$1,230.00'
     },
     documentos: [
-      { tipo: 'Reporte inicial', estado: 'Completado' },
-      { tipo: 'Fotos del siniestro', estado: 'Completado' },
+      { tipo: 'Reporte inicial', estado: 'Completado', url: '/documentos/reporte-inicial-SIN-2023-0042.png' },
+      { tipo: 'Fotos del siniestro', estado: 'Completado', url:'/documentos/imagepng.webp' },
       { tipo: 'Declaración del asegurado', estado: 'Pendiente' },
       { tipo: 'Evaluación del ajustador', estado: 'En proceso' }
     ]
@@ -207,7 +207,7 @@ const siniestrosData = [
       deducible: '$575.00'
     },
     documentos: [
-      { tipo: 'Reporte inicial', estado: 'Completado' },
+      { tipo: 'Reporte inicial', estado: 'Completado', url:['/documentos/informe.png', '/documentos/imagepng.webp'] },
       { tipo: 'Historial médico', estado: 'Pendiente' },
       { tipo: 'Estudios previos', estado: 'Pendiente' },
       { tipo: 'Recetas médicas', estado: 'Pendiente' }
@@ -551,7 +551,7 @@ const getDocumentIcon = (tipo: string) => {
 type Documento = {
   tipo: string;
   estado: string;
-  url?: string | null; // URL de la imagen o documento
+  url?: string | string[] | null; // URL única o array de URLs
 };
 
 interface PageProps {
@@ -564,6 +564,7 @@ interface PageProps {
 export default function DetalleSiniestro({ params }: PageProps) {
   const [documentoSeleccionado, setDocumentoSeleccionado] = useState<Documento | null>(null);
   const [modalAbierto, setModalAbierto] = useState(false);
+  const [imagenActualIndex, setImagenActualIndex] = useState(0);
 
   const abrirModal = (documento: Documento) => {
     setDocumentoSeleccionado(documento);
@@ -803,15 +804,45 @@ export default function DetalleSiniestro({ params }: PageProps) {
                     </svg>
                   </button>
                   <h3 className="text-xl font-semibold mb-4">{documentoSeleccionado.tipo}</h3>
-                  
-                  {documentoSeleccionado.url ? (
-                    <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                    {documentoSeleccionado.url ? (
+                    <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden relative">
                       {documentoSeleccionado.estado === 'Completado' ? (
-                        <img
-                          src={documentoSeleccionado.url}
-                          alt={documentoSeleccionado.tipo}
-                          className="w-full h-full object-contain"
-                        />
+                        <>
+                          <img
+                            src={Array.isArray(documentoSeleccionado.url) 
+                              ? documentoSeleccionado.url[imagenActualIndex]
+                              : documentoSeleccionado.url}
+                            alt={`${documentoSeleccionado.tipo} ${imagenActualIndex + 1}`}
+                            className="w-full h-full object-contain"
+                          />
+                          {Array.isArray(documentoSeleccionado.url) && documentoSeleccionado.url.length > 1 && (
+                            <>
+                              <button
+                                onClick={() => setImagenActualIndex(prev => 
+                                  prev === 0 ? documentoSeleccionado.url!.length - 1 : prev - 1
+                                )}
+                                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all"
+                              >
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                                </svg>
+                              </button>
+                              <button
+                                onClick={() => setImagenActualIndex(prev => 
+                                  prev === documentoSeleccionado.url!.length - 1 ? 0 : prev + 1
+                                )}
+                                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all"
+                              >
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                              </button>
+                              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full">
+                                {imagenActualIndex + 1} / {documentoSeleccionado.url.length}
+                              </div>
+                            </>
+                          )}
+                        </>
                       ) : (
                         <div className="w-full h-full flex items-center justify-center text-gray-500">
                           <p>Documento pendiente de carga</p>
