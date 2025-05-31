@@ -19,7 +19,24 @@ import dynamic from 'next/dynamic';
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-export default function AgentesPage({ params }: { params: { id: string } }) {
+interface PageProps {
+  params: {
+    id: string;
+  };
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
+
+export async function generateStaticParams() {
+  // Aquí normalmente obtendrías los IDs de tus aseguradoras de una base de datos
+  // Por ahora retornamos algunos IDs estáticos como ejemplo
+  return [
+    { id: '1' },
+    { id: '2' },
+    { id: '3' },
+  ];
+}
+
+export default function AgentesPage({ params }: PageProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedFilter, setSelectedFilter] = useState('todos');
 
