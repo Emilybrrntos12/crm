@@ -18,13 +18,7 @@ import dynamic from 'next/dynamic';
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
-
-export default function AgentesPage({ params }: PageProps) {
+export default function AgentesPage({ params }: { params: { id: string } }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedFilter, setSelectedFilter] = useState('todos');
 
