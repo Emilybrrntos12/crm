@@ -145,7 +145,7 @@ const siniestrosData = [
       deducible: '$1,230.00'
     },
     documentos: [
-      { tipo: 'Reporte inicial', estado: 'Completado', url: '/documentos/reporte-inicial-SIN-2023-0042.png' },
+      { tipo: 'Reporte inicial', estado: 'Completado', url: '/documentos/Siniestro1.webp' },
       { tipo: 'Fotos del siniestro', estado: 'Completado', url:'/documentos/imagepng.webp' },
       { tipo: 'Declaración del asegurado', estado: 'Pendiente' },
       { tipo: 'Evaluación del ajustador', estado: 'En proceso' }
@@ -207,7 +207,7 @@ const siniestrosData = [
       deducible: '$575.00'
     },
     documentos: [
-      { tipo: 'Reporte inicial', estado: 'Completado', url:['/documentos/informe.png', '/documentos/imagepng.webp'] },
+      { tipo: 'Reporte inicial', estado: 'Completado',  url: '/documentos/Siniestro1.webp'},
       { tipo: 'Historial médico', estado: 'Pendiente' },
       { tipo: 'Estudios previos', estado: 'Pendiente' },
       { tipo: 'Recetas médicas', estado: 'Pendiente' }
@@ -276,10 +276,10 @@ const siniestrosData = [
       deducible: '$0.00'
     },
     documentos: [
-      { tipo: 'Acta de defunción', estado: 'Completado' },
-      { tipo: 'Identificación de beneficiarios', estado: 'Completado' },
-      { tipo: 'Certificado médico', estado: 'Completado' },
-      { tipo: 'Póliza original', estado: 'Completado' }
+      { tipo: 'Acta de defunción', estado: 'Completado', url:['/documentos/def1.png', '/documentos/def2.png'] },
+      { tipo: 'Identificación de beneficiarios', estado: 'Completado', url:['/documentos/dpi.webp', '/documentos/dpi-atras.jpeg', '/documentos/partida.jpg'] },
+      { tipo: 'Certificado médico', estado: 'Completado',  url: '/documentos/cert_med.png' },
+      { tipo: 'Póliza original', estado: 'Completado',  url: '/documentos/poliza-vida.webp' }
     ]
   },
   {
@@ -352,10 +352,10 @@ const siniestrosData = [
       deducible: '$3,500.00'
     },
     documentos: [
-      { tipo: 'Denuncia ante MP', estado: 'Completado' },
-      { tipo: 'Factura original', estado: 'Completado' },
-      { tipo: 'Llaves del vehículo', estado: 'Completado' },
-      { tipo: 'Baja de placas', estado: 'Completado' }
+      { tipo: 'Denuncia ante MP', estado: 'Completado',  url: '/documentos/denuncia.webp' },
+      { tipo: 'Factura original', estado: 'Completado',  url: '/documentos/factura.webp' },
+      { tipo: 'Llaves del vehículo', estado: 'Completado',  url: '/documentos/llaves.jpg' },
+      { tipo: 'Baja de placas', estado: 'Completado',  url: '/documentos/placas-carro.png' }
     ]
   },
   {
@@ -421,10 +421,10 @@ const siniestrosData = [
       deducible: '$1,500.00'
     },
     documentos: [
-      { tipo: 'Expediente médico', estado: 'Completado' },
-      { tipo: 'Evaluación pericial', estado: 'Completado' },
-      { tipo: 'Reclamación formal', estado: 'Completado' },
-      { tipo: 'Documentación de seguimiento', estado: 'Completado' }
+      { tipo: 'Expediente médico', estado: 'Completado', url:['/documentos/cert_med.png', '/documentos/cert_med.png'] },
+      { tipo: 'Evaluación pericial', estado: 'Completado',  url: '/documentos/pericial.webp' },
+      { tipo: 'Reclamación formal', estado: 'Completado',  url: '/documentos/reclamo.jpg' },
+      { tipo: 'Documentación de seguimiento', estado: 'Completado',  url: '/documentos/segui.webp' }
     ]
   },
   {
@@ -492,7 +492,7 @@ const siniestrosData = [
       deducible: '$0.00'
     },
     documentos: [
-      { tipo: 'Denuncia inicial', estado: 'Completado' },
+      { tipo: 'Denuncia inicial', estado: 'Completado',  url: '/documentos/denuncia.webp' },
       { tipo: 'Reporte de investigación', estado: 'En proceso' },
       { tipo: 'Peritaje especial', estado: 'En proceso' },
       { tipo: 'Documentación legal', estado: 'Pendiente' }
