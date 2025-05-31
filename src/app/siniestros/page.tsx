@@ -293,8 +293,8 @@ export default function SiniestrosPage() {
                       {siniestro.estado.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
                     </span>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                    <div className="flex justify-end items-center gap-1">                      <Link href={`/siniestros/detalles/${siniestro.id}`}>
+                  <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">                    <div className="flex justify-end items-center gap-1">
+                      <Link href={`/siniestros/detalles/${siniestro.id.toLowerCase()}`}>
                         <button className="p-2 rounded-lg hover:bg-blue-50 text-blue-600" title="Ver detalles">
                           <FaSearch className="h-4 w-4" />
                         </button>
@@ -342,9 +342,8 @@ export default function SiniestrosPage() {
       </div>
 
       {/* Versión móvil (opcional) */}
-      <div className="md:hidden mt-6 space-y-3">
-        {siniestros.slice(0, 3).map((siniestro, index) => (
-          <Link href={`/siniestros/detalles/${siniestro.id}`} key={index} className="block">
+      <div className="md:hidden mt-6 space-y-3">        {siniestros.slice(0, 3).map((siniestro, index) => (
+          <Link href={`/siniestros/detalles/${siniestro.id.toLowerCase()}`} key={index} className="block">
             <div className={`bg-white p-4 rounded-lg shadow-sm border-l-4 ${siniestro.border} hover:bg-gray-50 transition-colors`}>
               <div className="flex justify-between items-start">
                 <div>
