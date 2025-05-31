@@ -14,6 +14,7 @@ import {
   FaPrint
 } from 'react-icons/fa';
 import Link from 'next/link';
+import Image from 'next/image';
 import dynamic from 'next/dynamic';
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
@@ -21,7 +22,6 @@ const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 export default function AgentesPage({ params }: { params: { id: string } }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedFilter, setSelectedFilter] = useState('todos');
-  const [showAgentDetail, setShowAgentDetail] = useState<number | null>(null);
 
   // Datos de ejemplo de los agentes
   const agentes = [
@@ -290,11 +290,12 @@ export default function AgentesPage({ params }: { params: { id: string } }) {
           {filteredAgentes.map((agente) => (
             <div key={agente.id} className="bg-white rounded-xl shadow-sm overflow-hidden">
               <div className="p-6">
-                <div className="flex items-start">
-                  <img 
+                <div className="flex items-start">                  <Image 
                     src={agente.foto} 
                     alt={agente.nombre}
-                    className="h-16 w-16 rounded-full object-cover mr-4"
+                    width={64}
+                    height={64}
+                    className="rounded-full object-cover mr-4"
                   />
                   <div>
                     <h3 className="text-xl font-semibold text-gray-800">{agente.nombre}</h3>
