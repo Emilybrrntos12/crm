@@ -14,7 +14,6 @@ import {
   FaPrint
 } from 'react-icons/fa';
 import Link from 'next/link';
-import Image from 'next/image';
 import dynamic from 'next/dynamic';
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
@@ -23,17 +22,6 @@ interface PageProps {
   params: {
     id: string;
   };
-  searchParams?: { [key: string]: string | string[] | undefined };
-}
-
-export async function generateStaticParams() {
-  // Aquí normalmente obtendrías los IDs de tus aseguradoras de una base de datos
-  // Por ahora retornamos algunos IDs estáticos como ejemplo
-  return [
-    { id: '1' },
-    { id: '2' },
-    { id: '3' },
-  ];
 }
 
 export default function AgentesPage({ params }: PageProps) {
@@ -306,14 +294,10 @@ export default function AgentesPage({ params }: PageProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filteredAgentes.map((agente) => (
             <div key={agente.id} className="bg-white rounded-xl shadow-sm overflow-hidden">
-              <div className="p-6">
-                <div className="flex items-start">                  <Image 
-                    src={agente.foto} 
-                    alt={agente.nombre}
-                    width={64}
-                    height={64}
-                    className="rounded-full object-cover mr-4"
-                  />
+              <div className="p-6">                <div className="flex items-start">
+                  <div className="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center mr-4">
+                    <FaUserTie className="h-8 w-8 text-gray-400" />
+                  </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-800">{agente.nombre}</h3>
                     <p className="text-sm text-gray-500">{agente.cargo}</p>
