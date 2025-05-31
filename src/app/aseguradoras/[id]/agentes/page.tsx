@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { 
   FaUserTie,
@@ -13,9 +15,7 @@ import {
   FaPrint
 } from 'react-icons/fa';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-
-const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
+import ChartComponent from './components/ChartComponent';
 
 export default function AgentesPage({ params }: { params: { id: string } }) {
   const [searchTerm, setSearchTerm] = useState('');
@@ -232,7 +232,7 @@ export default function AgentesPage({ params }: { params: { id: string } }) {
         {/* Gráfico de rendimiento */}
         <div className="bg-white rounded-xl shadow-sm p-6 mb-6">
           <h2 className="text-xl font-semibold text-gray-800 mb-4">Rendimiento de Ventas</h2>
-          <Chart 
+          <ChartComponent 
             options={rendimientoOptions} 
             series={rendimientoSeries} 
             type="bar" 

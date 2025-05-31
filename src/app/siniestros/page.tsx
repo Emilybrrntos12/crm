@@ -162,12 +162,11 @@ export default function SiniestrosPage() {
         <div>
           <h1 className="text-2xl md:text-3xl font-bold text-gray-800">Gestión de Siniestros</h1>
           <p className="text-gray-600 mt-1">Seguimiento y administración de reclamaciones</p>
-        </div>        <Link href="/siniestros/nuevo">
-          <button className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors shadow-sm">
-            <FaPlus className="text-lg" />
-            <span>Nuevo Reporte</span>
-          </button>
-        </Link>
+        </div>
+        <button className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors shadow-sm">
+          <FaPlus className="text-lg" />
+          <span>Nuevo Reporte</span>
+        </button>
       </div>
 
       {/* Tarjetas métricas mejoradas */}
