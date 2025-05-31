@@ -162,11 +162,12 @@ export default function SiniestrosPage() {
         <div>
           <h1 className="text-2xl md:text-3xl font-bold text-gray-800">Gestión de Siniestros</h1>
           <p className="text-gray-600 mt-1">Seguimiento y administración de reclamaciones</p>
-        </div>
-        <button className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors shadow-sm">
-          <FaPlus className="text-lg" />
-          <span>Nuevo Reporte</span>
-        </button>
+        </div>        <Link href="/siniestros/nuevo">
+          <button className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors shadow-sm">
+            <FaPlus className="text-lg" />
+            <span>Nuevo Reporte</span>
+          </button>
+        </Link>
       </div>
 
       {/* Tarjetas métricas mejoradas */}
@@ -294,15 +295,11 @@ export default function SiniestrosPage() {
                     </span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                    <div className="flex justify-end items-center gap-1">
-                      <Link href={`/siniestros/detalles/${siniestro.id}`}>
+                    <div className="flex justify-end items-center gap-1">                      <Link href={`/siniestros/detalles/${siniestro.id}`}>
                         <button className="p-2 rounded-lg hover:bg-blue-50 text-blue-600" title="Ver detalles">
                           <FaSearch className="h-4 w-4" />
                         </button>
                       </Link>
-                      <button className="p-2 rounded-lg hover:bg-gray-100 text-gray-600" title="Documentos">
-                        <FaFileAlt className="h-4 w-4" />
-                      </button>
                       {!['pagado', 'rechazado'].includes(siniestro.estado) && (
                         <button className="p-2 rounded-lg hover:bg-green-50 text-green-600" title="Editar">
                           <FaCheckCircle className="h-4 w-4" />
