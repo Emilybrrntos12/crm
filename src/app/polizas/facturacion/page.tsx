@@ -53,10 +53,12 @@ export default function FacturacionPage() {
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold text-gray-800">Facturación de Póliza</h1>
           <div className="flex gap-3">
-            <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-              <FaCreditCard className="h-5 w-5" />
-              <span>Realizar Pago</span>
-            </button>
+            <Link href="/polizas/pagos">
+              <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                <FaCreditCard className="h-5 w-5" />
+                <span>Realizar Pago</span>
+              </button>
+            </Link>
             <button className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
               <FaDownload className="h-5 w-5" />
               <span>Descargar Todo</span>
@@ -143,11 +145,12 @@ export default function FacturacionPage() {
                           <button className="p-2 rounded-lg hover:bg-gray-100 text-gray-600">
                             <FaDownload className="h-4 w-4" />
                           </button>
-                        </Link>
-                        {factura.estado === 'Pendiente' && (
-                          <button className="p-2 rounded-lg hover:bg-blue-50 text-blue-600">
-                            <FaMoneyCheckAlt className="h-4 w-4" />
-                          </button>
+                        </Link>                        {factura.estado === 'Pendiente' && (
+                          <Link href="/polizas/pagos">
+                            <button className="p-2 rounded-lg hover:bg-blue-50 text-blue-600">
+                              <FaMoneyCheckAlt className="h-4 w-4" />
+                            </button>
+                          </Link>
                         )}
                       </div>
                     </td>
