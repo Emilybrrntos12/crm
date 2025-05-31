@@ -201,10 +201,9 @@ export default function ClientHomeInsuranceProfile() {
                     <div className="p-3 bg-red-100 rounded-lg text-red-500">
                       <FaFire className="text-lg" />
                     </div>
-                    <div>
-                      <h4 className="font-bold text-slate-800">Incendio y Rayo</h4>
-                      <p className="text-slate-600 text-sm">Cobertura total del valor asegurado</p>
-                      <p className="text-xs text-slate-500 mt-1">Deducible: 5% (mínimo Q1,500)</p>
+                    <div>                      <h4 className="font-bold text-slate-800">Incendio y Rayo</h4>
+                      <p className="text-slate-600 text-sm">Cobertura total del valor asegurado (Q1,750,000)</p>
+                      <p className="text-xs text-slate-500 mt-1">Deducible: 1% del valor asegurado (mínimo Q2,500)</p>
                     </div>
                   </div>
                   
@@ -214,8 +213,8 @@ export default function ClientHomeInsuranceProfile() {
                     </div>
                     <div>
                       <h4 className="font-bold text-slate-800">Daños por Agua</h4>
-                      <p className="text-slate-600 text-sm">Hasta Q250,000 por inundación</p>
-                      <p className="text-xs text-slate-500 mt-1">Incluye filtraciones</p>
+                      <p className="text-slate-600 text-sm">Hasta Q525,000 (30% del valor asegurado)</p>
+                      <p className="text-xs text-slate-500 mt-1">Deducible: 10% del valor del reclamo (mínimo Q3,500)</p>
                     </div>
                   </div>
                   
@@ -224,9 +223,9 @@ export default function ClientHomeInsuranceProfile() {
                       <GiPadlock className="text-lg" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-slate-800">Robo</h4>
-                      <p className="text-slate-600 text-sm">Hasta Q100,000 para contenido</p>
-                      <p className="text-xs text-slate-500 mt-1">Incluye daños por vandalismo</p>
+                      <h4 className="font-bold text-slate-800">Robo y Asalto</h4>
+                      <p className="text-slate-600 text-sm">Hasta Q350,000 (20% del valor asegurado)</p>
+                      <p className="text-xs text-slate-500 mt-1">Deducible: 15% del valor del reclamo (mínimo Q5,000)</p>
                     </div>
                   </div>
                 </div>
@@ -236,20 +235,22 @@ export default function ClientHomeInsuranceProfile() {
                   <span>Detalles de Pago</span>
                 </h3>
                 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="bg-green-50 p-4 rounded-lg border border-green-100">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">                  <div className="bg-green-50 p-4 rounded-lg border border-green-100">
                     <p className="text-xs text-green-800 uppercase font-medium">Prima Anual</p>
-                    <p className="text-xl font-bold text-slate-800">Q2,450</p>
+                    <p className="text-xl font-bold text-slate-800">Q7,875</p>
+                    <p className="text-sm text-green-600">Q656.25 mensual</p>
                   </div>
                   
                   <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
                     <p className="text-xs text-blue-800 uppercase font-medium">Próximo Pago</p>
-                    <p className="font-medium text-slate-600">01/05/2024</p>
+                    <p className="font-medium text-slate-600">01/06/2025</p>
+                    <p className="text-sm text-blue-600">Frecuencia: Mensual</p>
                   </div>
                   
                   <div className="bg-amber-50 p-4 rounded-lg border border-amber-100">
                     <p className="text-xs text-amber-800 uppercase font-medium">Método de Pago</p>
-                    <p className="font-medium text-slate-600">Anual</p>
+                    <p className="font-medium text-slate-600">Tarjeta de crédito</p>
+                    <p className="text-sm text-amber-600">****-4582</p>
                   </div>
                 </div>
               </div>
