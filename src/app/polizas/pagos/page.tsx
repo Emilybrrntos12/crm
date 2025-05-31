@@ -44,7 +44,7 @@ export default function PagoPolizaPage() {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-800 mb-2">Realizar Pago</h1>
-          <p className="text-gray-600">Complete los detalles del pago de su póliza</p>
+          <p className="text-gray-700">Complete los detalles del pago de su póliza</p>
         </div>
 
         {/* Pasos de pago */}
@@ -66,11 +66,10 @@ export default function PagoPolizaPage() {
             }`}>
               3
             </div>
-          </div>
-          <div className="flex justify-between mt-2">
-            <span className="text-sm text-gray-600">Método</span>
-            <span className="text-sm text-gray-600">Detalles</span>
-            <span className="text-sm text-gray-600">Confirmación</span>
+          </div>          <div className="flex justify-between mt-2">
+            <span className="text-sm text-gray-700">Método</span>
+            <span className="text-sm text-gray-700">Detalles</span>
+            <span className="text-sm text-gray-700">Confirmación</span>
           </div>
         </div>
 
@@ -92,7 +91,7 @@ export default function PagoPolizaPage() {
                   }`}
                 >
                   <FaCreditCard className="h-8 w-8 text-blue-600" />
-                  <span className="font-medium">Tarjeta de Crédito</span>
+                  <span className="font-medium text-gray-600">Tarjeta de Crédito</span>
                 </button>
                 <button
                   onClick={() => {
@@ -106,7 +105,7 @@ export default function PagoPolizaPage() {
                   }`}
                 >
                   <FaMoneyBillWave className="h-8 w-8 text-blue-600" />
-                  <span className="font-medium">Efectivo</span>
+                  <span className="font-medium text-gray-600">Efectivo</span>
                 </button>
                 <button
                   onClick={() => {
@@ -120,7 +119,7 @@ export default function PagoPolizaPage() {
                   }`}
                 >
                   <FaUniversity className="h-8 w-8 text-blue-600" />
-                  <span className="font-medium">Transferencia</span>
+                  <span className="font-medium text-gray-600">Transferencia</span>
                 </button>
               </div>
             </div>
@@ -132,11 +131,11 @@ export default function PagoPolizaPage() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="bg-gray-50 p-4 rounded-lg mb-6">
                   <div className="flex justify-between mb-2">
-                    <span className="text-gray-600">Subtotal</span>
+                    <span className="text-gray-700">Subtotal</span>
                     <span className="text-gray-900">Q850.00</span>
                   </div>
                   <div className="flex justify-between mb-2">
-                    <span className="text-gray-600">IVA (12%)</span>
+                    <span className="text-gray-700">IVA (12%)</span>
                     <span className="text-gray-900">Q136.00</span>
                   </div>
                   <div className="flex justify-between font-semibold">
@@ -154,7 +153,7 @@ export default function PagoPolizaPage() {
                       <input
                         type="text"
                         maxLength={19}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-700"
                         placeholder="1234 5678 9012 3456"
                         value={formData.numeroTarjeta}
                         onChange={(e) => {
@@ -170,7 +169,7 @@ export default function PagoPolizaPage() {
                       </label>
                       <input
                         type="text"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-700"
                         placeholder="Como aparece en la tarjeta"
                         value={formData.nombreTitular}
                         onChange={(e) => setFormData({ ...formData, nombreTitular: e.target.value })}
@@ -184,7 +183,7 @@ export default function PagoPolizaPage() {
                         <input
                           type="text"
                           maxLength={5}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-700"
                           placeholder="MM/YY"
                           value={formData.fechaExp}
                           onChange={(e) => {
@@ -203,7 +202,7 @@ export default function PagoPolizaPage() {
                         <input
                           type="text"
                           maxLength={4}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-700"
                           placeholder="123"
                           value={formData.cvv}
                           onChange={(e) => {
@@ -218,8 +217,8 @@ export default function PagoPolizaPage() {
 
                 {metodoPago === 'efectivo' && (
                   <div className="bg-blue-50 p-4 rounded-lg">
-                    <h3 className="font-medium text-blue-800 mb-2">Instrucciones de Pago</h3>
-                    <p className="text-blue-600 mb-4">
+                    <h3 className="font-medium text-blue-800">Instrucciones de Pago</h3>
+                    <p className="text-gray-700 mb-4">
                       Visite cualquiera de nuestras agencias para realizar el pago en efectivo.
                       Presente el siguiente código:
                     </p>
@@ -231,33 +230,32 @@ export default function PagoPolizaPage() {
 
                 {metodoPago === 'transferencia' && (
                   <div className="bg-blue-50 p-4 rounded-lg">
-                    <h3 className="font-medium text-blue-800 mb-2">Datos Bancarios</h3>
+                    <h3 className="font-medium text-blue-800">Datos Bancarios</h3>
                     <div className="space-y-2">
                       <p className="flex justify-between">
-                        <span className="text-blue-600">Banco:</span>
-                        <span className="font-medium">Banco Industrial</span>
+                        <span className="text-gray-700">Banco:</span>
+                        <span className="font-medium text-gray-900">Banco Industrial</span>
                       </p>
                       <p className="flex justify-between">
-                        <span className="text-blue-600">Cuenta:</span>
-                        <span className="font-medium">123-456789-0</span>
+                        <span className="text-gray-700">Cuenta:</span>
+                        <span className="font-medium text-gray-900">123-456789-0</span>
                       </p>
                       <p className="flex justify-between">
-                        <span className="text-blue-600">Tipo:</span>
+                        <span className="text-gray-700">Tipo:</span>
                         <span className="font-medium">Monetaria</span>
                       </p>
                       <p className="flex justify-between">
-                        <span className="text-blue-600">Nombre:</span>
+                        <span className="text-gray-700">Nombre:</span>
                         <span className="font-medium">Seguros GT, S.A.</span>
                       </p>
                     </div>
                   </div>
                 )}
 
-                <div className="flex justify-between pt-6">
-                  <button
+                <div className="flex justify-between pt-6">                  <button
                     type="button"
                     onClick={() => setPaso(1)}
-                    className="px-6 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+                    className="px-6 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-gray-600"
                   >
                     Anterior
                   </button>
@@ -281,7 +279,7 @@ export default function PagoPolizaPage() {
                     <FiCheck className="h-8 w-8 text-green-600" />
                   </div>
                   <h2 className="text-2xl font-semibold text-gray-800">¡Pago Exitoso!</h2>
-                  <p className="text-gray-600">
+                  <p className="text-gray-700">
                     Su pago ha sido procesado correctamente. 
                     Recibirá un correo electrónico con la confirmación.
                   </p>
@@ -297,7 +295,7 @@ export default function PagoPolizaPage() {
                     <FiX className="h-8 w-8 text-red-600" />
                   </div>
                   <h2 className="text-2xl font-semibold text-gray-800">Error en el Pago</h2>
-                  <p className="text-gray-600">
+                  <p className="text-gray-700">
                     Ha ocurrido un error al procesar su pago. 
                     Por favor, intente nuevamente.
                   </p>
