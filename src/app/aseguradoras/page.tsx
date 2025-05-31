@@ -173,15 +173,9 @@ export default function AseguradorasPage() {
                   </a>
                 </div>
               </div>
-              
-              {/* Footer */}
-              <div className="flex justify-between items-center pt-3 border-t border-gray-100">
+                {/* Footer */}
+              <div className="flex justify-end items-center pt-3 border-t border-gray-100">
                 <span className="text-sm text-gray-500">{aseguradora.productosCount} productos</span>
-                <Link href={`/aseguradoras/${aseguradora.id}`}>
-                  <button className="flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium">
-                    Ver detalles <FaChevronRight className="ml-1 h-3 w-3" />
-                  </button>
-                </Link>
               </div>
             </div>
           </div>
