@@ -2,6 +2,7 @@
 
 import { FaChevronLeft, FaFileAlt, FaHistory, FaUserMd, FaCarCrash, FaMapMarkerAlt, FaPhone, FaEnvelope, FaFileContract, FaFileMedical, FaFileInvoice, FaFileSignature, FaCamera, FaFilePdf, FaFileImage } from 'react-icons/fa';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, use } from 'react';
 
 const siniestrosData = [
@@ -808,12 +809,14 @@ export default function DetalleSiniestro({ params }: PageProps) {
                     <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden relative">
                       {documentoSeleccionado.estado === 'Completado' ? (
                         <>
-                          <img
+                          <Image
                             src={Array.isArray(documentoSeleccionado.url) 
                               ? documentoSeleccionado.url[imagenActualIndex]
-                              : documentoSeleccionado.url}
+                              : documentoSeleccionado.url || ''}
                             alt={`${documentoSeleccionado.tipo} ${imagenActualIndex + 1}`}
-                            className="w-full h-full object-contain"
+                            fill
+                            className="object-contain"
+                            unoptimized
                           />
                           {Array.isArray(documentoSeleccionado.url) && documentoSeleccionado.url.length > 1 && (
                             <>
